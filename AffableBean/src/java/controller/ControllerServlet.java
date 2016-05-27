@@ -5,13 +5,23 @@
  */
 package controller;
 
+
+import cart.ShoppingCart;
+import entity.Category;
+import entity.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Collection;
+import javax.ejb.EJB;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import session.CategoryFacade;
+import session.ProductFacade;
 
 /**
  *
@@ -28,6 +38,24 @@ import javax.servlet.http.HttpServletResponse;
                        "/chooseLanguage"})
 
 public class ControllerServlet extends HttpServlet {
+    
+    private String surcharge;
+    
+    @EJB
+    private CategoryFacade categoryFacade;
+    @EJB
+    private ProductFacade productFacade;
+    
+    @Override
+    public void init(ServletConfig servletConfig) throws ServletException {
+        
+        super.init(servletConfig);
+
+        // initialize servlet with configuration information
+        surcharge = servletConfig.getServletContext().getInitParameter("deliverySurcharge");
+        // store category list in servlet context
+        getServletContext().setAttribute("categories", categoryFacade.findAll());
+    }
 
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -41,20 +69,52 @@ public class ControllerServlet extends HttpServlet {
     throws ServletException, IOException {
 
         String userPath = request.getServletPath();
+        HttpSession session = request.getSession();
+        Category selectedCategory;
+        Collection<Product> categoryProducts;
 
         // if category page is requested
         if (userPath.equals("/category")) {
-            // TODO: Implement category request
+            // get categoryId from request
+            String categoryId = request.getQueryString();
+
+            if (categoryId != null) {
+                // get selected category
+                selectedCategory = categoryFacade.find(Short.parseShort(categoryId));
+                
+                // place selected category in request scope
+                request.setAttribute("selectedCategory", selectedCategory);
+                
+                // get all products for selected category
+                categoryProducts = selectedCategory.getProductCollection();
+                
+                // place category products in request scope
+                request.setAttribute("categoryProducts", categoryProducts);
+            }
 
         // if cart page is requested
         } else if (userPath.equals("/viewCart")) {
-            // TODO: Implement cart page request
+            
+            String clear = request.getParameter("clear");
+
+            if ((clear != null) && clear.equals("true")) {
+
+                ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
+                cart.clear();
+            }
 
             userPath = "/cart";
 
         // if checkout page is requested
         } else if (userPath.equals("/checkout")) {
-            // TODO: Implement checkout page request
+            
+            ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
+
+            // calculate total
+            cart.calculateTotal(surcharge);
+
+            // forward to checkout page and switch to a secure channel
+            //userPath = "/checkout";
 
         // if user switches language
         } else if (userPath.equals("/chooseLanguage")) {
@@ -84,14 +144,40 @@ public class ControllerServlet extends HttpServlet {
     throws ServletException, IOException {
 
         String userPath = request.getServletPath();
+        HttpSession session = request.getSession();
+        ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
 
         // if addToCart action is called
         if (userPath.equals("/addToCart")) {
-            // TODO: Implement add product to cart action
+            // if user is adding item to cart for first time
+            // create cart object and attach it to user session
+            if (cart == null) {
+
+                cart = new ShoppingCart();
+                session.setAttribute("cart", cart);
+            }
+
+            // get user input from request
+            String productId = request.getParameter("productId");
+
+            if (!productId.isEmpty()) {
+
+                Product product = productFacade.find(Integer.parseInt(productId));
+                cart.addItem(product);
+            }
+
+            userPath = "/category";
 
         // if updateCart action is called
         } else if (userPath.equals("/updateCart")) {
-            // TODO: Implement update cart action
+            // get input from request
+            String productId = request.getParameter("productId");
+            String quantity = request.getParameter("quantity");
+
+            Product product = productFacade.find(Integer.parseInt(productId));
+            cart.update(product, quantity);
+
+            userPath = "/cart";
 
         // if purchase action is called
         } else if (userPath.equals("/purchase")) {
