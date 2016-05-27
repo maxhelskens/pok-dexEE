@@ -15,23 +15,23 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <sql:update var="result" dataSource="jdbc/affablebean">
-            SELECT * FROM category
-        </sql:update>
-            
-        <table border="1">
-            <!-- column headers -->
+        <sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost/affablebean"
+            user="root"  password="password"/>
+ 
+        <sql:query dataSource="${snapshot}" var="result">
+            SELECT * from category;
+        </sql:query>
+
+        <table border="1" width="100%">
             <tr>
-                <c:forEach var="columnName" items="${result.columnNames}">
-                    <th><c:out value="${columnName}"/></th>
-                </c:forEach>
+               <th>id</th>
+               <th>name</th>
             </tr>
-            <!-- column data -->
-            <c:forEach var="row" items="${result.rowsByIndex}">
+            <c:forEach var="row" items="${result.rows}">
                 <tr>
-                    <c:forEach var="column" items="${row}">
-                        <td><c:out value="${column}"/></td>
-                    </c:forEach>
+                   <td><c:out value="${row.id}"/></td>
+                   <td><c:out value="${row.name}"/></td>
                 </tr>
             </c:forEach>
         </table>
