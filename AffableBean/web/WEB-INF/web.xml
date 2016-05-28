@@ -10,6 +10,21 @@
         <param-name>categoryImagePath</param-name>
         <param-value>img/categories/</param-value>
     </context-param>
+    <context-param>
+        <description>The relative path to pokemon images</description>
+        <param-name>pokemonImagePath</param-name>
+        <param-value>img/pokemon/</param-value>
+    </context-param>
+    <context-param>
+        <description>The relative path to footprints images</description>
+        <param-name>footprintImagePath</param-name>
+        <param-value>img/footprints/</param-value>
+    </context-param>
+    <context-param>
+        <description>The relative path to types images</description>
+        <param-name>typesImagePath</param-name>
+        <param-value>img/types/</param-value>
+    </context-param>
     <session-config>
         <session-timeout>
             30

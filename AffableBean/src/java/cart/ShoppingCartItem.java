@@ -5,6 +5,7 @@
 
 package cart;
 
+import entity.Pokemon;
 import entity.Product;
 
 /**
@@ -13,16 +14,17 @@ import entity.Product;
  */
 public class ShoppingCartItem {
 
+    Pokemon pokemon;
     Product product;
     short quantity;
 
-    public ShoppingCartItem(Product product) {
-        this.product = product;
+    public ShoppingCartItem(Pokemon pokemon) {
+        this.pokemon = pokemon;
         quantity = 1;
     }
 
-    public Product getProduct() {
-        return product;
+    public Pokemon getPokemon() {
+        return pokemon;
     }
 
     public short getQuantity() {
@@ -40,11 +42,4 @@ public class ShoppingCartItem {
     public void decrementQuantity() {
         quantity--;
     }
-
-    public double getTotal() {
-        double amount = 0;
-        amount = (this.getQuantity() * product.getPrice().doubleValue());
-        return amount;
-    }
-
 }

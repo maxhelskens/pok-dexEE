@@ -5,14 +5,164 @@ Author     : tgiunipero
 Description: Style rules for the AffableBean application
 */
 
-/* html tags */
+/* 
+ *  html tags Pokemon
+ */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     width: 850px;
     text-align: center;
     margin: 20px auto;
+    background-image: url("../img/background.png");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;              /* optional, center the image */
     color: #444;
 }
+
+#main { 
+    width: 850px;
+    height: 671px;
+    background: #ffffff;
+    border:10px solid black;
+}
+
+/*
+ *  Header 
+ */
+
+#header {
+    width: 850px;
+    height: 150px;
+}
+
+#widgetBar {
+    height: 50px;
+    width: 900px;
+    float: right;
+}
+
+.headerWidget {
+    width: 194px;
+    margin: 20px 0;
+    font-size: small;
+    float: right;
+    line-height: 25px;
+}
+
+#viewCart {
+    text-align: left;
+    width: 260px;
+}
+
+#pokeball {
+    width: 25px;
+    position: absolute;
+    margin: 0px 0 0 2px;
+}
+
+#logo {
+    width: 105px;
+    float: left;
+    margin-left: 30px;
+    margin-top: -25px;
+}
+
+#logoText {
+    float: left;
+    margin: 20px 0 0 70px;
+    /* font styles apply to text within img alt attribute */
+    font-family: 'sans-serif', monospace;
+    font-size: 45px;
+    color: #333;
+}
+
+/*
+ *  Index Page 
+ */
+
+#typerow {
+    text-align: left;
+    width: 100%;
+    margin: 5px 5px 0 30px;
+    float: left;
+}
+
+.typeBox {
+    margin: 10px 7px;
+    float: inherit;
+}
+
+.typeImage {
+    padding: 1px;
+}
+
+#wildPokemonRow {
+    text-align: left;
+    height: 400px;
+    width: 100%;
+    float: left;
+}
+
+#wildPokemonText {
+    margin: 30px 5px 0 30px;
+    line-height: 1.4em;
+}
+
+.wildPokemonImage {
+    width: 105px;
+    padding: 1px;
+}
+
+#pokémonInformation {
+    background-color: #eeeeee;
+    height: 115px;
+    width: 655px;
+    padding-left: 140px;
+    margin-left: -3px;
+    margin-top: -130px;
+}
+
+#pokémonInformation2 {
+    text-align: right;
+    margin-top: -130px;
+    margin-right: 10px;
+}
+
+#wildPokemonTitle {
+    padding-top: 5px;
+}
+
+#wildPokemonTyperow {
+    text-align: left;
+    width: 100%;
+    margin: -7px 0 0 -8px;
+    float: left;
+}
+
+/*
+ *  Type Page
+ */
+
+#typePage {
+    width: 100%;
+    height: 480px;
+    overflow-y: scroll; 
+}
+
+#selectedType {
+    opacity: 0.2;
+}
+
+
+
+
+
+
+
+
+/* html tags Affablebean*/
 
 hr {
     border: 0;
@@ -46,7 +196,6 @@ label { line-height: 30px }
 
 
 /* general styles */
-#main { background: #f7f7e9 }
 
 #singleColumn {
     margin: 20px 30px;
@@ -75,36 +224,6 @@ label { line-height: 30px }
     height: 30px;
 }
 
-
-/* styles for elements contained in the header, i.e.,
-   shopping cart widget, language toggle, and logo */
-#header {
-    width: 850px;
-    height: 250px;
-    background: url(../img/stalk.png) no-repeat 28px 28px;
-}
-
-#logo {
-    float: left;
-    margin-left: 30px;
-    margin-top: -20px;
-}
-
-#logoText {
-    float: left;
-    margin: 20px 0 0 70px;
-    /* font styles apply to text within img alt attribute */
-    font-family: 'American Typewriter', Courier, monospace;
-    font-size: 50px;
-    color: #333;
-}
-
-#widgetBar {
-    height: 50px;
-    width: 850px;
-    float: right;
-}
-
 #cart {
     position: absolute;
     margin: 5px 0 0 2px;
@@ -113,19 +232,6 @@ label { line-height: 30px }
 .horizontalMargin {
     margin-left: 28px;
     margin-right: 5px
-}
-
-#viewCart {
-    text-align: left;
-    width: 210px;
-}
-
-.headerWidget {
-    width: 194px;
-    margin: 20px 0;
-    font-size: small;
-    float: right;
-    line-height: 25px;
 }
 
 
@@ -159,11 +265,6 @@ label { line-height: 30px }
     float: left;
 }
 
-#welcomeText {
-    margin: 30px 5px 0 30px;
-    line-height: 1.4em;
-}
-
 .categoryBox {
     height: 176px;
     width: 212px;
@@ -195,7 +296,7 @@ label { line-height: 30px }
 
 /* category page styles */
 #categoryLeftColumn {
-    width: 185px;
+    width: 175px;
     float: left;
     margin-top: 25px;
     padding-left: 15px;
@@ -203,7 +304,7 @@ label { line-height: 30px }
 
 #categoryRightColumn {
     margin-top: 10px;
-    width: 650px;
+    width: 815px;
     float: left;
 }
 
@@ -233,7 +334,7 @@ label { line-height: 30px }
     font-size: x-large;
 }
 
-#productTable { width: 600px }
+#productTable { width: 810px }
 
 #productTable tr { height: 90px }
 
@@ -300,7 +401,6 @@ label { line-height: 30px }
     padding: 10px;
     background-color: #f5eabe;
     float: left;
-    width:540px;
 }
 
 .summaryColumn {
@@ -309,15 +409,55 @@ label { line-height: 30px }
     float: left;
 }
 
-#orderSummaryTable {
-    width: 100%;
-    text-align: left;
-    height: 200px;
+.tableHeading {
+    font-weight: bold;
+    background-color: #edf8f7;
 }
+
+.detailsTable { text-align: left }
+
+.detailsTable th { padding: 5px 10px }
+
+.detailsTable td {
+    padding: 5px 10px 5px 20px;
+    font-size: small;
+    font-family: "Courier New", courier, monospace;
+}
+
+#orderSummaryTable { width: 100% }
 
 #deliveryAddressTable {
     width: 70%;
     margin-left: 15%;
-    text-align: left;
-    height: 200px;
 }
+
+#deliveryAddressTable td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.quantityColumn {
+    text-align: center;
+    width: 62px;
+}
+
+.confirmationPriceColumn {
+    width: 90px;
+    font-weight: normal;
+}
+
+#deliverySurchargeCellLeft {
+    text-align: right;
+    padding: 0;
+}
+
+#deliverySurchargeCellRight { padding: 0 20px }
+
+#totalCellLeft {
+    text-align: right;
+    padding: 0;
+}
+
+#totalCellRight { padding: 0 20px }
+
+#dateProcessedRow { padding: 2px 0 10px 20px }

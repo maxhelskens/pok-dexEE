@@ -5,6 +5,7 @@
 
 package cart;
 
+import entity.Pokemon;
 import entity.Product;
 import java.util.*;
 
@@ -30,16 +31,16 @@ public class ShoppingCart {
      * already exists in shopping cart list, the quantity of that item is
      * incremented.
      *
-     * @param product the <code>Product</code> that defines the type of shopping cart item
+     * @param pokemon the <code>Pokemon</code> that defines the type of shopping cart item
      * @see ShoppingCartItem
      */
-    public synchronized void addItem(Product product) {
+    public synchronized void addItem(Pokemon pokemon) {
 
         boolean newItem = true;
 
         for (ShoppingCartItem scItem : items) {
 
-            if (scItem.getProduct().getId() == product.getId()) {
+            if (scItem.getPokemon().getId() == pokemon.getId()) {
 
                 newItem = false;
                 scItem.incrementQuantity();
@@ -47,22 +48,22 @@ public class ShoppingCart {
         }
 
         if (newItem) {
-            ShoppingCartItem scItem = new ShoppingCartItem(product);
+            ShoppingCartItem scItem = new ShoppingCartItem(pokemon);
             items.add(scItem);
         }
     }
 
     /**
      * Updates the <code>ShoppingCartItem</code> of the specified
-     * <code>product</code> to the specified quantity. If '<code>0</code>'
+     * <code>pokemon</code> to the specified quantity. If '<code>0</code>'
      * is the given quantity, the <code>ShoppingCartItem</code> is removed
      * from the <code>ShoppingCart</code>'s <code>items</code> list.
      *
-     * @param product the <code>Product</code> that defines the type of shopping cart item
+     * @param pokemon the <code>Pokemon</code> that defines the type of shopping cart item
      * @param quantity the number which the <code>ShoppingCartItem</code> is updated to
      * @see ShoppingCartItem
      */
-    public synchronized void update(Product product, String quantity) {
+    public synchronized void update(Pokemon pokemon, String quantity) {
 
         short qty = -1;
 
@@ -75,7 +76,7 @@ public class ShoppingCart {
 
             for (ShoppingCartItem scItem : items) {
 
-                if (scItem.getProduct().getId() == product.getId()) {
+                if (scItem.getPokemon().getId() == pokemon.getId()) {
 
                     if (qty != 0) {
                         // set item quantity to new value
@@ -123,58 +124,6 @@ public class ShoppingCart {
         }
 
         return numberOfItems;
-    }
-
-    /**
-     * Returns the sum of the product price multiplied by the quantity for all
-     * items in shopping cart list. This is the total cost excluding the surcharge.
-     *
-     * @return the cost of all items times their quantities
-     * @see ShoppingCartItem
-     */
-    public synchronized double getSubtotal() {
-
-        double amount = 0;
-
-        for (ShoppingCartItem scItem : items) {
-
-            Product product = (Product) scItem.getProduct();
-            amount += (scItem.getQuantity() * product.getPrice().doubleValue());
-        }
-
-        return amount;
-    }
-
-    /**
-     * Calculates the total cost of the order. This method adds the subtotal to
-     * the designated surcharge and sets the <code>total</code> instance variable
-     * with the result.
-     *
-     * @param surcharge the designated surcharge for all orders
-     * @see ShoppingCartItem
-     */
-    public synchronized void calculateTotal(String surcharge) {
-
-        double amount = 0;
-
-        // cast surcharge as double
-        double s = Double.parseDouble(surcharge);
-
-        amount = this.getSubtotal();
-        amount += s;
-
-        total = amount;
-    }
-
-    /**
-     * Returns the total cost of the order for the given
-     * <code>ShoppingCart</code> instance.
-     *
-     * @return the cost of all items times their quantities plus surcharge
-     */
-    public synchronized double getTotal() {
-
-        return total;
     }
 
     /**

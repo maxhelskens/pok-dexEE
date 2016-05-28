@@ -9,30 +9,52 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<%--sql:query dataSource="jdbc/affablebean" var="categories">
-    SELECT * FROM category
-</sql:query--%>
-
-<div id="indexLeftColumn">
-    <div id="welcomeText">
-        <p style="font-size: larger">Welcome to the online home of the Affable Bean Green Grocer.</p>
-
-        <p>Enjoy browsing and learning more about our unique home delivery
-            service bringing you fresh organic produce, dairy, meats, breads
-            and other delicious and healthy items to your doorstep.</p>
-    </div>
-</div>
-
-<div id="indexRightColumn">
-    <c:forEach var="category" items="${categories}">
-        <div class="categoryBox">
-            <a href="category?${category.id}">
-                <span class="categoryLabel"></span>
-                <span class="categoryLabelText">${category.name}</span>
-
-                <img src="${initParam.categoryImagePath}${category.name}.jpg"
-                     alt="${category.name}" class="categoryImage">
+<div id="typerow">
+    <c:forEach var="type" items="${types}">
+        <div class="typeBox">
+            <a href="type?${type.id}"> <%--TODO: CHANGE LINK--%>
+                <img src="${initParam.typesImagePath}${type.id}.png"
+                     alt="${type.name}" class="typeImage">
             </a>
         </div>
     </c:forEach>
+</div>
+
+<div id="wildPokemonRow">
+    <div id="wildPokemonText">
+        <p style="font-size: larger">Wild Pokémon appeared!</p>
+        
+        <img src="${initParam.pokemonImagePath}${randPokemon.id}.png"
+                     alt="${randPokemon.name}" class="wildPokemonImage">
+        
+        <div id="pokémonInformation">
+            <h3 id="wildPokemonTitle">No.${randPokemon.id}  ${randPokemon.name}</h3>
+            <text>Ability I: ${randPokemon.abilityI}</text>
+            <br/>
+            <text>Ability II: ${randPokemon.abilityII}</text>
+            <br/>
+            <div id="wildPokemonTyperow">
+                <c:forEach var="type" items="${randPokemonTypes}">
+                    <div class="typeBox">
+                        <a href="type?${type.id}"> <%--TODO: CHANGE LINK--%>
+                            <img src="${initParam.typesImagePath}${type.id}.png"
+                                 alt="${type.name}" class="typeImage">
+                        </a>
+                    </div>
+                </c:forEach>
+            </div>
+            <div id="pokémonInformation2">
+                
+            </div>
+        </div>
+    </div>
+    
+    <form action="addToCart" method="post">
+        <input type="hidden"
+               name="pokemonId"
+               value="${randPokemon.id}">
+        <input type="submit"
+               name="submit"
+               value="Catch Pokemon">
+    </form>
 </div>
