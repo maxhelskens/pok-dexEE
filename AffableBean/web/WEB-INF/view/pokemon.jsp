@@ -9,7 +9,81 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<div id="wildPokemonRow">
+<div class="pokemonHeader">
+    <h1>No.${selectedPokemon.id} ${selectedPokemon.name}</h1>
+</div>
+
+<div id="pokemonLeftHeader">
+    <c:if test="${selectedPokemon.id > 1}">
+        <a href="pokemon?${selectedPokemon.id - 1}" class="pokemonlink bubble"> No. ${selectedPokemon.id - 1}</a>
+    </c:if>
+    <text style="visibility: hidden"> previous </text>
+</div>
+<div id="pokemonRightheader">
+    <c:if test="${selectedPokemon.id < 151}">
+        <a href="pokemon?${selectedPokemon.id + 1}" class="pokemonlink bubble"> No. ${selectedPokemon.id + 1}</a>
+    </c:if>
+    <text style="visibility: hidden"> next </text>
+</div>
+
+<div id="pokemonLeftColumn">
+    <img src="${initParam.pokemonImagePath}${selectedPokemon.id}.png"
+                     alt="${selectedPokemon.name}" class="pokemonImage">
+</div>
+
+<div id="pokemonRightColumn">
+    <br/>
+    <text><strong>Height:</strong> ${(selectedPokemon.height/10)} m</text>
+    <br/>
+    <text><strong>Ability I:</strong> ${selectedPokemon.abilityI}</text>
+    <br/>
+    <text><strong>Gender:</strong> ${selectedPokemon.gender}</text>
+    <br/>
+    <text><strong>Evolves at/by:</strong> ${selectedPokemon.evolvesBy}</text>
+    <br/>
+    <c:if test="${!empty selectedPokemon.evolvesFrom}">
+        <a href="pokemon?${selectedPokemon.evolvesFrom}" class="pokemonlink bubble"> 
+            <text>Evolves from: </text>
+            <img src="${initParam.pokemonImagePath}${selectedPokemon.evolvesFrom}.png" class="thumbnail">
+        </a>
+    </c:if>
+    <br/>
+    <c:if test="${!empty selectedPokemon.evolvesTo}">
+        <a href="pokemon?${selectedPokemon.evolvesTo}" class="pokemonlink bubble"> 
+            <text>Evolves to: </text>
+            <img src="${initParam.pokemonImagePath}${selectedPokemon.evolvesTo}.png" class="thumbnail">
+        </a>
+    </c:if>
+</div>
+<div id="pokemonRightColumn">
+    <br/>
+    <text><strong>Weight:</strong> ${(selectedPokemon.weight/10)} kg</text>
+    <br/>
+    <text><strong>Ability II:</strong> ${selectedPokemon.abilityII}</text>
+    <br/>
+    <br/>
+    <br/>
+    <text><strong>Footprint: </strong></text>
+    <img src="${initParam.footprintImagePath}${selectedPokemon.id}.png" class="thumbnail">
+</div>
+    
+<div id="pokemonTyperow">
+    <c:forEach var="type" items="${selectedPokemonTypes}">
+        <div class="typeBox">
+            <a href="type?${type.id}">
+                <img src="${initParam.typesImagePath}${type.id}.png"
+                     alt="${type.name}" class="typeImage">
+            </a>
+        </div>
+    </c:forEach>
+</div>
+
+<div id="pokemonFooter">
+    footer
+</div>
+
+
+<%--div id="wildPokemonRow">
     <div id="wildPokemonText">
         
         <img src="${initParam.pokemonImagePath}${selectedPokemon.id}.png"
@@ -24,7 +98,7 @@
             <div id="wildPokemonTyperow">
                 <c:forEach var="type" items="${selectedPokemonTypes}">
                     <div class="typeBox">
-                        <a href="type?${type.id}"> <%--TODO: CHANGE LINK--%>
+                        <a href="type?${type.id}">
                             <img src="${initParam.typesImagePath}${type.id}.png"
                                  alt="${type.name}" class="typeImage">
                         </a>
@@ -42,4 +116,4 @@
                name="submit"
                value="Catch Pokemon">
     </form>
-</div>
+</div--%>

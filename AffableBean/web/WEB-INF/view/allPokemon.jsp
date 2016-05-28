@@ -21,17 +21,25 @@
 
                 <tr class="${((iter.index % 2) == 0) ? 'lightBlue' : 'white'}">
                     <td>
-                        <img src="${initParam.pokemonImagePath}${pokemon.id}.png"
-                             alt="${pokemon.name}">
+                        <a href="pokemon?${pokemon.id}">
+                            <img src="${initParam.pokemonImagePath}${pokemon.id}.png"
+                                 alt="${pokemon.name}">
+                        </a>
                     </td>
 
                     <td>
-                        ${pokemon.name}
-                        <br>
-                        <span class="smallText">${pokemon.abilityI}</span>
+                        <a href="pokemon?${pokemon.id}">
+                            ${pokemon.name}
+                            <br>
+                            <span class="smallText">${pokemon.abilityI}</span>
+                        </a>
                     </td>
 
-                    <td>&euro; ${pokemon.total}</td>
+                    <td>
+                        <a href="pokemon?${pokemon.id}">
+                            ${pokemon.total}
+                        </a>
+                    </td>
 
                     <td>
                         <form action="addToCart" method="post">

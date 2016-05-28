@@ -44,7 +44,18 @@
                 </c:forEach>
             </div>
             <div id="pokémonInformation2">
-                
+                <text><small>Attack: ${randPokemon.attack}</small></text>
+                <br/>
+                <text><small>Defense: ${randPokemon.defense}</small></text>
+                <br/>
+                <text><small>Speed: ${randPokemon.speed}</small></text>
+            </div>
+            <div id="pokémonInformation3">
+                <text><small>Special attack: ${randPokemon.specialAttack}</small></text>
+                <br/>
+                <text><small>Special defense: ${randPokemon.specialDefense}</small></text>
+                <br/>
+                <text><small>Hp: ${randPokemon.hp}</small></text>
             </div>
         </div>
     </div>

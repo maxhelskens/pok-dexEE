@@ -125,8 +125,14 @@ body {
 }
 
 #pokémonInformation2 {
-    text-align: right;
-    margin-top: -130px;
+    margin-top: -50px;
+    margin-left: 300px;
+    margin-right: 10px;
+}
+
+#pokémonInformation3 {
+    margin-top: -70px;
+    margin-left: 500px;
     margin-right: 10px;
 }
 
@@ -136,7 +142,6 @@ body {
 
 #wildPokemonTyperow {
     text-align: left;
-    width: 100%;
     margin: -7px 0 0 -8px;
     float: left;
 }
@@ -155,7 +160,83 @@ body {
     opacity: 0.2;
 }
 
+table tr td a {
+    display:block;
+    height:100%;
+    width:100%;
+}
 
+table tr td {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*
+ *  Pokemon page
+ */
+
+.pokemonHeader {
+    background: #ffffff;
+}
+
+.pokemonlink {
+    font-size: 12px;
+}
+
+#pokemonLeftHeader {
+    width: 180px;
+    float: left;
+    background: #ffffff;
+    margin-top: -20px;
+}
+
+#pokemonRightHeader {
+    width: 670px;
+    text-align: right;
+    float: left;
+    background: #ffffff;
+    margin-top: -20px;
+    margin-left: 180px;
+}
+
+#pokemonFooter {
+    height: 275px;
+    clear: left;
+    background: #aaa;
+}
+
+#pokemonLeftColumn {
+    height: 180px;
+    width: 200px;
+    float: left;
+    background: #ffffff;
+}
+
+.pokemonImage {
+    width: 160px;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+#pokemonRightColumn {
+    text-align: left;
+    height: 145px;
+    width: 315px;
+    float: left;
+    background: #ffffff;
+    padding-left: 10;
+}
+
+.thumbnail {
+    height: 20px;
+    transform:  translateY(30%);
+}
+
+#pokemonTyperow {
+    text-align: left;
+    margin: -7px 0 0 2px;
+    float: left;
+}
 
 
 
@@ -179,7 +260,7 @@ table {
 
 a {
     color: inherit;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:hover { text-decoration: none }
