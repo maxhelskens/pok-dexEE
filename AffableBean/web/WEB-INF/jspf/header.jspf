@@ -9,6 +9,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="css/affablebean.css">
         <link rel="shortcut icon" href="img/favicon.ico">
+        
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
         <title>pok_EE_dex</title>
     </head>
@@ -56,9 +58,12 @@
                 </div>
                 </div>
 
-                <a href="index.jsp">
+                <a href="randomPokemon">
                     <img src="img/Pokemon-Logo.jpg" id="logo" alt="Pokemon logo">
-                </a>
+                </a> 
+                <!--<a href="index.jsp">
+                    <img src="img/Pokemon-Logo.jpg" id="logo" alt="Pokemon logo">
+                </a>-->
 
                 <h1 id="logoText">Got to catch'em all</h1>
             </div>

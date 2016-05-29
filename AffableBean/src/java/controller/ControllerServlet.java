@@ -36,7 +36,8 @@ import session.TypeFacade;
                        "/pokemon",
                        "/addToCart",
                        "/viewCart",
-                       "/updateCart"})
+                       "/updateCart",
+                       "/randomPokemon"})
 
 public class ControllerServlet extends HttpServlet {
     
@@ -81,17 +82,6 @@ public class ControllerServlet extends HttpServlet {
         
         Type selectedType;
         Collection<Pokemon> typePokemon;
-        
-        
-        // store random pokemon
-        Random r = new Random();
-        int Low = 1;
-        int High = 151;
-        int Result = r.nextInt(High-Low) + Low;
-        
-        Pokemon randPokemon = pokemonFacade.find(Result);
-        session.setAttribute("randPokemon", randPokemon);
-        session.setAttribute("randPokemonTypes", randPokemon.getTypeCollection());
 
         // if type page is requested
         if (userPath.equals("/type")) {
@@ -147,10 +137,31 @@ public class ControllerServlet extends HttpServlet {
             }
 
             userPath = "/cart";
+            
+        // if random pokemon is requested
+        } else if (userPath.equals("/randomPokemon")) {
+            
+            // store random pokemon
+            Random r = new Random();
+            int Low = 1;
+            int High = 151;
+            int Result = r.nextInt(High-Low) + Low;
+
+            Pokemon randPokemon = pokemonFacade.find(Result);
+            session.setAttribute("randPokemon", randPokemon);
+            session.setAttribute("randPokemonTypes", randPokemon.getTypeCollection());
+
+            userPath = "index";
         }
         
+        String url;
         // use RequestDispatcher to forward request internally
-        String url = "/WEB-INF/view" + userPath + ".jsp";
+        if (userPath.equals("index")){
+            url = "/index.jsp";
+        }
+        else {
+            url = "/WEB-INF/view" + userPath + ".jsp";
+        }
 
         try {
             request.getRequestDispatcher(url).forward(request, response);
@@ -195,7 +206,7 @@ public class ControllerServlet extends HttpServlet {
                 cart.addItem(pokemon);
             }
 
-            userPath = "/type";
+            userPath = "/cart"; 
 
 
         // if updateCart action is called
