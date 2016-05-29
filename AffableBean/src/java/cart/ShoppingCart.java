@@ -6,12 +6,11 @@
 package cart;
 
 import entity.Pokemon;
-import entity.Product;
 import java.util.*;
 
 /**
  *
- * @author tgiunipero
+ * @author Max
  */
 public class ShoppingCart {
 

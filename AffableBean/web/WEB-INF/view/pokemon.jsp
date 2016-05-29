@@ -65,6 +65,13 @@
     <br/>
     <text><strong>Footprint: </strong></text>
     <img src="${initParam.footprintImagePath}${selectedPokemon.id}.png" class="thumbnail">
+    <br/>
+    <text><strong>Cry: </strong></text>
+    <audio id="cry" controls preload="auto">
+        <source src="${initParam.criesSoundPath}${selectedPokemon.id}.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
 </div>
     
 <div id="pokemonTyperow">
@@ -79,7 +86,65 @@
 </div>
 
 <div id="pokemonFooter">
-    footer
+    <div class="pokemonFooterLeft">
+        <text><strong>Hp: </strong></text>
+        <br/>
+        <text><strong>Attack: </strong></text>
+        <br/>
+        <text><strong>Defense: </strong></text>
+    </div>
+    <div class="pokemonFooterMiddle">
+        <text>${selectedPokemon.hp}</text>
+        <br/>
+        <text>${selectedPokemon.attack}</text>
+        <br/>
+        <text>${selectedPokemon.defense}</text>
+    </div>
+    <div class="pokemonFooterRight">
+        <text style="visibility: hidden">1</text><progress max="250" value="${selectedPokemon.hp}"></progress>
+        <br/>
+        <text style="visibility: hidden">1</text><progress max="134" value="${selectedPokemon.attack}"></progress>
+        <br/>
+        <text style="visibility: hidden">1</text><progress max="180" value="${selectedPokemon.defense}"></progress>
+    </div>
+    
+    <div class="pokemonFooterLeft">
+        <text><strong>Speed: </strong></text>
+        <br/>
+        <text><strong>Special attack: </strong></text>
+        <br/>
+        <text><strong>Special defense: </strong></text>
+    </div>
+    <div class="pokemonFooterMiddle">
+        <text>${selectedPokemon.speed}</text>
+        <br/>
+        <text>${selectedPokemon.specialAttack}</text>
+        <br/>
+        <text>${selectedPokemon.specialDefense}</text>
+    </div>
+    <div class="pokemonFooterRight">
+        <text style="visibility: hidden">1</text><progress max="140" value="${selectedPokemon.speed}"></progress>
+        <br/>
+        <text style="visibility: hidden">1</text><progress max="154" value="${selectedPokemon.specialAttack}"></progress>
+        <br/>
+        <text style="visibility: hidden">1</text><progress max="125" value="${selectedPokemon.specialDefense}"></progress>
+    </div>
+    
+    <div class="pokemonBigFooterLeft">
+        <br/>
+        <text><strong>Total Strength: </strong></text>
+        <br/>
+    </div>
+    <div class="pokemonBigFooterMiddle">
+        <br/>
+        <text>${selectedPokemon.total}</text>
+        <br/>
+    </div>
+    <div class="pokemonBigFooterRight">
+        <br/>
+        <text style="visibility: hidden">1</text><progress id="totalStrength" max="680" value="${selectedPokemon.total}"></progress>
+        <br/>
+    </div>
 </div>
 
 

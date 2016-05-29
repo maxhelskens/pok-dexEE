@@ -41,7 +41,7 @@
 
             <c:forEach var="pokemon" items="${typePokemon}" varStatus="iter">
                 
-                <tr class="${((iter.index % 2) == 0) ? 'lightBlue' : 'white'}">
+                <tr class="${((iter.index % 2) == 0) ? 'lightRed' : 'white'}">
                     <td>
                         <a href="pokemon?${pokemon.id}">
                             <img src="${initParam.pokemonImagePath}${pokemon.id}.png"
@@ -52,26 +52,46 @@
                     <td>
                         <a href="pokemon?${pokemon.id}">
                             ${pokemon.name}
-                            <br>
-                            <span class="smallText">${pokemon.abilityI}</span>
                         </a>
                     </td>
 
                     <td>
                         <a href="pokemon?${pokemon.id}">
-                            &euro; ${pokemon.total}
+                            <span class="smallText">${pokemon.abilityI}</span>
+                            <br>
+                            <span class="smallText">${pokemon.abilityII}</span>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="pokemon?${pokemon.id}">
+                            <c:forEach var="type" items="${pokemon.getTypeCollection()}">
+                                <c:choose>
+                                        <c:when test="${type.name == selectedType.name}">
+                                            <div class="typeBox" id="selectedType">
+                                                <img src="${initParam.typesImagePath}${type.id}.png"
+                                                     alt="${type.name}" class="typeImage">
+                                            </div>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <div class="typeBox">
+                                                <img src="${initParam.typesImagePath}${type.id}.png"
+                                                     alt="${type.name}" class="typeImage">
+                                            </div>
+                                        </c:otherwise>
+                                    </c:choose>
+                            </c:forEach>
                         </a>
                     </td>
 
                     <td>
-                        <form action="addToCart" method="post">
-                            <input type="hidden"
-                                   name="pokemonId"
-                                   value="${pokemon.id}">
-                            <input type="submit"
-                                   name="submit"
-                                   value="add to cart">
-                        </form>
+                        <c:if test="${!empty cart && cart.numberOfItems != 0}">
+                            <c:forEach var="cartItem" items="${cart.items}">
+                                <c:if test="${cartItem.pokemon.id == pokemon.id}">
+                                    <img src="img/Pokeball.png" alt="pokeball icon" id="caught">
+                                </c:if>
+                            </c:forEach>
+                        </c:if>
                     </td>
                 </tr>
 

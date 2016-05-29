@@ -7,9 +7,7 @@ package controller;
 
 
 import cart.ShoppingCart;
-import entity.Category;
 import entity.Pokemon;
-import entity.Product;
 import entity.Type;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -23,9 +21,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import session.CategoryFacade;
 import session.PokemonFacade;
-import session.ProductFacade;
 import session.TypeFacade;
 
 /**
@@ -44,12 +40,6 @@ import session.TypeFacade;
 
 public class ControllerServlet extends HttpServlet {
     
-    private String surcharge;
-
-    @EJB
-    private CategoryFacade categoryFacade;
-    @EJB
-    private ProductFacade productFacade;
     @EJB
     private PokemonFacade pokemonFacade;
     @EJB
@@ -88,9 +78,6 @@ public class ControllerServlet extends HttpServlet {
 
         String userPath = request.getServletPath();
         HttpSession session = request.getSession();
-        
-        Category selectedCategory;
-        Collection<Product> categoryProducts;
         
         Type selectedType;
         Collection<Pokemon> typePokemon;

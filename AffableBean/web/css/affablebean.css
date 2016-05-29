@@ -98,6 +98,10 @@ body {
     padding: 1px;
 }
 
+#caught {
+    width: 56px;
+}
+
 #wildPokemonRow {
     text-align: left;
     height: 400px;
@@ -188,6 +192,7 @@ table tr td {
     float: left;
     background: #ffffff;
     margin-top: -20px;
+    margin-bottom: 20px;
 }
 
 #pokemonRightHeader {
@@ -197,12 +202,116 @@ table tr td {
     background: #ffffff;
     margin-top: -20px;
     margin-left: 180px;
+    margin-bottom: 20px;
 }
 
 #pokemonFooter {
-    height: 275px;
+    height: 200px;
+    text-align: left;
     clear: left;
-    background: #aaa;
+    background: #ffffff;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.pokemonFooterLeft{
+    width: 135px;
+    float: left;
+    background: #ffffff;
+}
+
+.pokemonFooterMiddle{
+    width: 30px;
+    float: left;
+    background: #ffffff;
+}
+.pokemonFooterRight{
+    width: 255px;
+    float: left;
+    background: #ffffff;
+}
+
+.pokemonBigFooterLeft{
+    width: 135px;
+    float: left;
+    background: #ffffff;
+}
+
+.pokemonBigFooterMiddle{
+    width: 30px;
+    float: left;
+    background: #ffffff;
+}
+.pokemonBigFooterRight{
+    width: 675px;
+    float: left;
+    background: #ffffff;
+}
+
+progress,          /* All HTML5 progress enabled browsers */
+progress[role]     /* polyfill */
+{
+
+    /* Turns off styling - not usually needed, but good to know. */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    /* gets rid of default border in Firefox and Opera. */ 
+    border: none;
+
+    /* Needs to be in here for Safari polyfill so background images work as expected. */
+    background-size: auto;
+
+    /* Dimensions */
+    width: 230px;
+    height: 10px;
+    transform:  translateY(-25%);
+	
+}
+
+/* Polyfill */
+progress[role]:after {
+    background-image: none; /* removes default background from polyfill */
+}
+
+/* Ensure fallback text doesn't appear in polyfill */
+progress[role] strong {
+    display: none;
+}
+
+progress,                          /* Firefox  */ 
+progress[role][aria-valuenow] {    /* Polyfill */
+   background: #eeeeee !important; /* !important is needed by the polyfill */
+}
+
+/* Chrome */
+progress::-webkit-progress-bar {
+    background: #eeeeee;
+}
+
+/* IE10 */
+progress {
+    color: #333333;
+}
+
+/* Firefox */
+progress::-moz-progress-bar { 
+    background: #333333;	
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: #333333;
+}
+
+/* Polyfill */
+progress[aria-valuenow]:before  {
+    background: #333333;
+}
+
+#totalStrength {
+    width: 650px;
 }
 
 #pokemonLeftColumn {
@@ -234,9 +343,26 @@ table tr td {
 
 #pokemonTyperow {
     text-align: left;
+    width: 325px;
     margin: -7px 0 0 2px;
     float: left;
 }
+
+#cry {
+    height: 20px;
+    transform:  translateY(30%);
+}
+
+/*
+ *  Cart Page
+ */
+#cartPage {
+    width: 100%;
+    height: 440px;
+    overflow-y: scroll;
+}
+
+
 
 
 
@@ -283,13 +409,13 @@ label { line-height: 30px }
     text-align: left;
 }
 
-.lightBlue { background-color: #edf8f7 }
+.lightRed { background-color: #ffeeee }
 
 .white { background-color: #fff }
 
 .bubble {
     font-weight: bold;
-    background-color: #f5eabe;
+    background-color: #ffeeee;
     padding: 5px;
     color: inherit;
 }
@@ -301,7 +427,7 @@ label { line-height: 30px }
 .reallySmallText { font-size: xx-small }
 
 .header {
-    background-color: #c3e3e0;
+    background-color: #ffdddd;
     height: 30px;
 }
 
@@ -459,8 +585,8 @@ label { line-height: 30px }
 
 #priceBox {
     padding: 10px;
-    border: 1px solid #c3e3e0;
-    background-color: #c3e3e0;
+    border: 1px solid #ffdddd;
+    background-color: #ffdddd;
 }
 
 #priceBox td {
@@ -480,7 +606,7 @@ label { line-height: 30px }
 #confirmationText {
     margin: 0 20px 20px;
     padding: 10px;
-    background-color: #f5eabe;
+    background-color: #ffdddd;
     float: left;
 }
 
@@ -492,7 +618,7 @@ label { line-height: 30px }
 
 .tableHeading {
     font-weight: bold;
-    background-color: #edf8f7;
+    background-color: #ffdddd;
 }
 
 .detailsTable { text-align: left }

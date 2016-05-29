@@ -6,16 +6,14 @@
 package cart;
 
 import entity.Pokemon;
-import entity.Product;
 
 /**
  *
- * @author tgiunipero
+ * @author Max
  */
 public class ShoppingCartItem {
 
     Pokemon pokemon;
-    Product product;
     short quantity;
 
     public ShoppingCartItem(Pokemon pokemon) {

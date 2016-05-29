@@ -23,55 +23,75 @@
         <a href="index.jsp" class="bubble hMargin">Start catching pokémon</a>
         
     </div>
+    <div id="cartPage">
+        
+        <c:if test="${!empty cart && cart.numberOfItems != 0}">
 
-    <c:if test="${!empty cart && cart.numberOfItems != 0}">
+          <table id="cartTable">
 
-      <h4 id="subtotal">Total caught: ${cart.numberOfItems}</h4>
+            <tr class="header">
+                <th>Pokémon</th>
+                <th>Name</th>
+                <th>Types</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
 
-      <table id="cartTable">
+            <c:forEach var="cartItem" items="${cart.items}" varStatus="iter">
 
-        <tr class="header">
-            <th>pokemon</th>
-            <th>name</th>
-            <th>abilityI</th>
-            <th>quantity</th>
-        </tr>
+              <c:set var="pokemon" value="${cartItem.pokemon}"/>
 
-        <c:forEach var="cartItem" items="${cart.items}" varStatus="iter">
+              <tr class="${((iter.index % 2) == 0) ? 'lightRed' : 'white'}">
+                <td>
+                  <img src="${initParam.pokemonImagePath}${pokemon.id}.png"
+                       alt="${pokemon.name}">
+                </td>
 
-          <c:set var="pokemon" value="${cartItem.pokemon}"/>
+                <td>${pokemon.name}</td>
 
-          <tr class="${((iter.index % 2) == 0) ? 'lightBlue' : 'white'}">
-            <td>
-              <img src="${initParam.pokemonImagePath}${pokemon.id}.png"
-                   alt="${pokemon.name}">
-            </td>
+                <td>
+                    <c:forEach var="type" items="${cartItem.pokemon.getTypeCollection()}">
+                        <div class="typeBox">
+                            <img src="${initParam.typesImagePath}${type.id}.png"
+                                 alt="${type.name}" class="typeImage">
+                        </div>
+                    </c:forEach>
+                </td>
 
-            <td>${pokemon.name}</td>
+                <td>
+                    ${cartItem.quantity}
+                </td>
+                
+                <td>
+                    <form action="updateCart" method="post" style="margin-top: 20px;">
+                        <input type="hidden"
+                               name="pokemonId"
+                               value="${pokemon.id}">
+                        <input type="hidden"
+                               value="${cartItem.quantity - 1}"
+                               name="quantity">
+                        <input type="submit"
+                               name="submit"
+                               value="Release one">
+                    </form>
+                    <form action="updateCart" method="post" style="margin-top: -20px;">
+                        <input type="hidden"
+                               name="pokemonId"
+                               value="${pokemon.id}">
+                        <input type="hidden"
+                               value="0"
+                               name="quantity">
+                        <input type="submit"
+                               name="submit"
+                               value="Release all">
+                    </form>
+                </td>
+              </tr>
 
-            <td>${pokemon.abilityI}</td>
+            </c:forEach>
 
-            <td>
-                <form action="updateCart" method="post">
-                    <input type="hidden"
-                           name="pokemonId"
-                           value="${pokemon.id}">
-                    <input type="text"
-                           maxlength="2"
-                           size="2"
-                           value="${cartItem.quantity}"
-                           name="quantity"
-                           style="margin:5px">
-                    <input type="submit"
-                           name="submit"
-                           value="update">
-                </form>
-            </td>
-          </tr>
+          </table>
 
-        </c:forEach>
-
-      </table>
-
-    </c:if>
+        </c:if>
+    </div>
 </div>
