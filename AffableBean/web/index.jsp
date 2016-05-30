@@ -211,7 +211,7 @@
 
                 .transition()
                 .delay(2140)
-                .duration(200)
+                .duration(100)
                 .attr("transform", "translate(-86 , -172) rotate(0)")
                 .each("end", function(){
                     if(randomInt >= ${randPokemon.total - 195}){

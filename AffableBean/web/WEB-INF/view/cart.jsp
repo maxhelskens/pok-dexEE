@@ -20,7 +20,7 @@
         </c:if>
 
         <%-- continue shopping widget --%>
-        <a href="index.jsp" class="bubble hMargin">Start catching pokémon</a>
+        <a href="randomPokemon" class="bubble hMargin">Start catching pokémon</a>
         
     </div>
         <div id="cartPage" style="height:451px">

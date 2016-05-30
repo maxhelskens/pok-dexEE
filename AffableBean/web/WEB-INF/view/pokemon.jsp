@@ -71,11 +71,18 @@
     </c:if>
     <br/>
     <br/>
-    <text><strong>Cry: </strong></text>
-    <audio id="cry" controls preload="auto">
+    <text id="cryLink"><strong>Cry: </strong></text>
+    <audio id="cry" preload="auto">
         <source src="${initParam.criesSoundPath}${selectedPokemon.id}.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+    <input type="button" value="PLAY"  onclick="play()">
+    <script>
+        function play(){
+            var audio = document.getElementById("cry");
+            audio.play();
+        }
+   </script>
     
 </div>
     
