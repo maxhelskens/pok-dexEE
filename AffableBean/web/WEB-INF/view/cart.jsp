@@ -23,7 +23,7 @@
         <a href="index.jsp" class="bubble hMargin">Start catching pokémon</a>
         
     </div>
-    <div id="cartPage">
+        <div id="cartPage" style="height:451px">
         
         <c:if test="${!empty cart && cart.numberOfItems != 0}">
 

@@ -29,41 +29,44 @@
                         </span>
                     </div>
 
-                <%-- shopping cart widget --%>
-                  <div class="headerWidget" id="viewCart">
+                    <%-- shopping cart widget --%>
+                    <div class="headerWidget" id="viewCart">
 
-                    <c:if test="${!empty cart && cart.numberOfItems != 0 &&
-                                  !fn:contains(pageContext.request.servletPath,'/cart') &&
-                                  requestScope['javax.servlet.forward.servlet_path'] ne '/cart'}">
-                              
-                        <img src="img/Pokeball.png" alt="pokeball icon" id="pokeball">
+                        <c:if test="${!empty cart && cart.numberOfItems != 0 &&
+                                      !fn:contains(pageContext.request.servletPath,'/cart') &&
+                                      requestScope['javax.servlet.forward.servlet_path'] ne '/cart'}">
 
-                        <%-- If 'numberOfItems' property doesn't exist, or if number of items
-                        in cart is 0, output '0', otherwise output 'numberOfItems' --%>
-                        <span class="horizontalMargin">
-                            <a href="viewCart" class="bubble">
-                                <c:choose>
-                                  <c:when test="${cart.numberOfItems == null}">
-                                    0
-                                  </c:when>
-                                  <c:otherwise>
-                                    ${cart.numberOfItems}
-                                  </c:otherwise>
-                                </c:choose>
+                            <img src="img/Pokeball.png" alt="pokeball icon" id="pokeball">
 
-                                Pokémon caught
-                            </a>
-                        </span>
-                    </c:if>
+                            <%-- If 'numberOfItems' property doesn't exist, or if number of items
+                            in cart is 0, output '0', otherwise output 'numberOfItems' --%>
+                            <span class="horizontalMargin">
+                                <a href="viewCart" class="bubble">
+                                    <c:choose>
+                                      <c:when test="${cart.numberOfItems == null}">
+                                        0
+                                      </c:when>
+                                      <c:otherwise>
+                                        ${cart.numberOfItems}
+                                      </c:otherwise>
+                                    </c:choose>
+
+                                    Pokémon caught
+                                </a>
+                            </span>
+                        </c:if>
+                    </div>
+                    
+                    <div class="headerWidget" style="width: 200px; margin-top: 30px;">
+                        <a href="randomPokemon">
+                            <img src="img/Pokemon-Logo.png" id="logo" alt="Pokemon logo">
+                        </a> 
+                    </div>
                 </div>
+
+                <div style="width: 100%; height: 32px; text-align: center ">
+                    <h1 style="padding-top: 70px; font-size: 30px; color: #333;">
+                        Got to catch'em all
+                    </h1>
                 </div>
-
-                <a href="randomPokemon">
-                    <img src="img/Pokemon-Logo.jpg" id="logo" alt="Pokemon logo">
-                </a> 
-                <!--<a href="index.jsp">
-                    <img src="img/Pokemon-Logo.jpg" id="logo" alt="Pokemon logo">
-                </a>-->
-
-                <h1 id="logoText">Got to catch'em all</h1>
             </div>

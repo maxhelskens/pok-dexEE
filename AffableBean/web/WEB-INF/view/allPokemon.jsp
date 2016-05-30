@@ -11,7 +11,7 @@
     "http://www.w3.org/TR/html4/loose.dtd">
 
 
-<div id="typePage">
+<div id="typePage" style="height: 520px">
 
     <div id="categoryRightColumn">
 

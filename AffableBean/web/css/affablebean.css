@@ -9,8 +9,16 @@ Description: Style rules for the AffableBean application
  *  html tags Pokemon
  */
 
+@font-face {
+    font-family: pokemonFont;
+    src: url("../fonts/Pokemon.ttf");
+}
+
+h1, text, h2, h3, a {
+    font-family: pokemonFont;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
     width: 850px;
     text-align: center;
     margin: 20px auto;
@@ -34,17 +42,18 @@ body {
 
 #header {
     width: 850px;
-    height: 150px;
+    height: 130px;
 }
 
 #widgetBar {
     height: 50px;
-    width: 900px;
+    width: 100%;
     float: right;
 }
 
 .headerWidget {
-    width: 194px;
+    width: 40%;
+    text-align: right;
     margin: 20px 0;
     font-size: small;
     float: right;
@@ -59,7 +68,7 @@ body {
 #pokeball {
     width: 25px;
     position: absolute;
-    margin: 0px 0 0 2px;
+    margin: -2px 0 0 2px;
 }
 
 #logo {
@@ -71,10 +80,9 @@ body {
 
 #logoText {
     float: left;
-    margin: 20px 0 0 70px;
+    margin: 20px 0 0 0px;
     /* font styles apply to text within img alt attribute */
-    font-family: 'sans-serif', monospace;
-    font-size: 45px;
+    font-size: 30px;
     color: #333;
 }
 
@@ -109,6 +117,10 @@ body {
     float: left;
 }
 
+#wildPokemonTitleText {
+    font-size: 25;
+}
+
 #wildPokemonRow {
     width: 100%;
     height: 211px;
@@ -124,18 +136,18 @@ body {
 }
 
 .pokemonLeft{
-    width: 135px;
+    width: 145px;
     float: left;
     background: #ffffff;
 }
 
 .pokemonMiddle{
-    width: 30px;
+    width: 55px;
     float: left;
     background: #ffffff;
 }
 .pokemonRight{
-    width: 365px;
+    width: 330px;
     float: left;
     background: #ffffff;
 }
@@ -168,6 +180,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     float: left;
+    text-align: left;
+}
+
+#catchButton{
+    cursor: pointer;
 }
 
 #trainerImageholder {
@@ -255,6 +272,7 @@ table tr td {
 }
 
 #pokemonLeftHeader {
+    text-align: left;
     width: 180px;
     float: left;
     background: #ffffff;
@@ -267,7 +285,7 @@ table tr td {
     text-align: right;
     float: left;
     background: #ffffff;
-    margin-top: -20px;
+    margin-top: -32px;
     margin-left: 180px;
     margin-bottom: 20px;
 }
@@ -282,37 +300,39 @@ table tr td {
 }
 
 .pokemonFooterLeft{
-    width: 135px;
+    width: 155px;
     float: left;
     background: #ffffff;
 }
 
 .pokemonFooterMiddle{
-    width: 30px;
+    width: 40px;
     float: left;
     background: #ffffff;
 }
 .pokemonFooterRight{
-    width: 255px;
+    width: 225px;
     float: left;
     background: #ffffff;
 }
 
 .pokemonBigFooterLeft{
-    width: 135px;
+    width: 145px;
     float: left;
     background: #ffffff;
 }
 
 .pokemonBigFooterMiddle{
-    width: 30px;
+    width: 40px;
     float: left;
     background: #ffffff;
+    padding-top: 10px;
 }
 .pokemonBigFooterRight{
-    width: 675px;
+    width: 655px;
     float: left;
     background: #ffffff;
+    padding-top: 10px;
 }
 
 progress,          /* All HTML5 progress enabled browsers */
@@ -331,9 +351,9 @@ progress[role]     /* polyfill */
     background-size: auto;
 
     /* Dimensions */
-    width: 230px;
+    width: 212px;
     height: 10px;
-    transform:  translateY(-25%);
+    transform:  translateY(-40%);
 	
 }
 
@@ -378,7 +398,8 @@ progress[aria-valuenow]:before  {
 }
 
 #totalStrength {
-    width: 650px;
+    width: 630px;
+    margin-left: 10px;
 }
 
 #pokemonLeftColumn {
@@ -476,9 +497,16 @@ label { line-height: 30px }
     text-align: left;
 }
 
-.lightRed { background-color: #ffeeee }
+.lightRed { 
+    background-color: #ffeeee;
+    font-family: pokemonFont;
+}
 
-.white { background-color: #fff }
+.white { 
+    background-color: #fff;
+    font-family: pokemonFont;
+    font-size: 15px;
+}
 
 .bubble {
     font-weight: bold;
@@ -487,7 +515,10 @@ label { line-height: 30px }
     color: inherit;
 }
 
-.hMargin { margin: 0 30px }
+.hMargin { 
+    margin-left: 15px;
+    margin-right: 15px;
+}
 
 .smallText { font-size: small }
 
@@ -496,6 +527,8 @@ label { line-height: 30px }
 .header {
     background-color: #ffdddd;
     height: 30px;
+    font-family: pokemonFont;
+    font-size: 13px;
 }
 
 #cart {
@@ -505,7 +538,7 @@ label { line-height: 30px }
 
 .horizontalMargin {
     margin-left: 28px;
-    margin-right: 5px
+    margin-right: 20px
 }
 
 
@@ -604,8 +637,8 @@ label { line-height: 30px }
 
 /* cart page styles */
 #actionBar {
-    margin: 30px;
-    width: 750px;
+    margin-bottom: 30px;
+    width: 100%;
     text-align: center;
 }
 
@@ -682,7 +715,7 @@ label { line-height: 30px }
 .detailsTable td {
     padding: 5px 10px 5px 20px;
     font-size: small;
-    font-family: "Courier New", courier, monospace;
+    font-family: pokemonFont;
 }
 
 #orderSummaryTable { width: 100% }
