@@ -25,9 +25,41 @@
 </div>
 
 <div id="pokemonLeftColumn">
-    <img src="${initParam.pokemonImagePath}${selectedPokemon.id}.png"
+    <img id="sideImg" src="${initParam.pokemonImagePath}${selectedPokemon.id}.png"
                      alt="${selectedPokemon.name}" class="pokemonImage">
+    <text id="switchSide"><tiny style="font-size: 10px; cursor: pointer">show backside</tiny></text>
 </div>
+    
+<script>
+    var front = true;
+    
+    d3.select('#switchSide')
+            .on('click', function(){
+                
+                if (front){
+                    d3.select('#sideImg')
+                        .attr('src', '${initParam.pokemonImagePath}back/${selectedPokemon.id}.png');
+                
+                    d3.select(switchSide)
+                        .style('font-size', 10)
+                        .style('cursor','pointer')
+                        .text('show frontside');
+                        
+                    front = false;
+                }
+                else {
+                    d3.select('#sideImg')
+                        .attr('src', '${initParam.pokemonImagePath}${selectedPokemon.id}.png');
+                
+                    d3.select(switchSide)
+                        .style('font-size', 10)
+                        .style('cursor','pointer')
+                        .text('show backside');
+                
+                    front = true;
+                }
+            })
+</script>
 
 <div id="pokemonRightColumn" style="font-size: 12px">
     <br/>

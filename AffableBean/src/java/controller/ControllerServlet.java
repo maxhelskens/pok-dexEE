@@ -14,6 +14,8 @@ import java.io.PrintWriter;
 import java.util.Collection;
 import java.util.Random;
 import javax.ejb.EJB;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -46,6 +48,9 @@ public class ControllerServlet extends HttpServlet {
     @EJB
     private TypeFacade typeFacade;
 
+    private static final long serialVersionUID = 1L;
+    private static final String SHOPPING_CART_BEAN_SESION_KEY = "shoppingCart";
+    
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
 
@@ -82,7 +87,8 @@ public class ControllerServlet extends HttpServlet {
         
         Type selectedType;
         Collection<Pokemon> typePokemon;
-
+        
+        
         // if type page is requested
         if (userPath.equals("/type")) {
 
@@ -191,6 +197,7 @@ public class ControllerServlet extends HttpServlet {
 
             // if user is adding item to cart for first time
             // create cart object and attach it to user session
+            
             if (cart == null) {
 
                 cart = new ShoppingCart();
