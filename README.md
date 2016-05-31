@@ -27,8 +27,8 @@ JPA
 Web-client
 ----------
 
-* [v] One Servlet 
-* [v] One Filter 
+- [v] One Servlet 
+- [v] One Filter 
 * Framework: the choice is up to you
     * Page flow
     * Form & validation & business logic
