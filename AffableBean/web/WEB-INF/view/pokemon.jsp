@@ -73,9 +73,9 @@
     <text><strong>Evolves at/by:</strong> ${selectedPokemon.evolvesBy}</text>
     <br/>
     <c:if test="${!empty selectedPokemon.evolvesFrom}">
-        <a href="pokemon?${selectedPokemon.evolvesFrom}" class="pokemonlink bubble"> 
+        <a href="pokemon?${selectedPokemon.evolvesFrom.id}" class="pokemonlink bubble"> 
             <text>Evolves from: </text>
-            <img src="${initParam.pokemonImagePath}${selectedPokemon.evolvesFrom}.png" class="thumbnail">
+            <img src="${initParam.pokemonImagePath}${selectedPokemon.evolvesFrom.id}.png" class="thumbnail">
         </a>
     </c:if>
     <br/>

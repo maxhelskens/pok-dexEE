@@ -11,6 +11,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -124,11 +126,17 @@ public class Pokemon implements Serializable {
     @Column(name = "evolvesBy")
     private String evolvesBy;
     
-    @Column(name = "evolvesFrom")
-    private Integer evolvesFrom;
-   
-    @Column(name = "evolvesTo")
-    private Integer evolvesTo;
+    /*@Column(name = "evolvesFrom")*/
+    @JoinColumn(name = "evolvesFrom")
+    @OneToOne
+    private Pokemon evolvesFrom;
+    
+    
+    @OneToMany
+    private Collection<Pokemon> evolvesTo;
+    
+//    @Column(name = "evolvesTo")
+//    private Integer evolvesTo;
     
     @JoinTable(name = "pokemon_has_type", joinColumns = {
         @JoinColumn(name = "pokemon_id", referencedColumnName = "id")}, inverseJoinColumns = {
@@ -279,19 +287,19 @@ public class Pokemon implements Serializable {
         this.evolvesBy = evolvesBy;
     }
 
-    public Integer getEvolvesFrom() {
+    public Pokemon getEvolvesFrom() {
         return evolvesFrom;
     }
 
-    public void setEvolvesFrom(Integer evolvesFrom) {
+    public void setEvolvesFrom(Pokemon evolvesFrom) {
         this.evolvesFrom = evolvesFrom;
     }
 
-    public Integer getEvolvesTo() {
+    public Collection<Pokemon> getEvolvesTo() {
         return evolvesTo;
     }
 
-    public void setEvolvesTo(Integer evolvesTo) {
+    public void setEvolvesTo(Collection<Pokemon> evolvesTo) {
         this.evolvesTo = evolvesTo;
     }
 
