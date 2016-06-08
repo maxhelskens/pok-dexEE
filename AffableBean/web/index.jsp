@@ -7,7 +7,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 
 <div style="height: 521px; width: 100%">
     <div id="typerow">

@@ -7,7 +7,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 
 <div class="pokemonHeader">
     <h1>No.${selectedPokemon.id} ${selectedPokemon.name}</h1>
