@@ -7,45 +7,20 @@ import java.util.*;
  *
  * @author Max
  */
+@Deprecated
 public class ShoppingCart {
 
-    List<ShoppingCartItem> items;
+    List<PokeBall> items;
     int numberOfItems;
     double total;
 
     public ShoppingCart() {
-        items = new ArrayList<ShoppingCartItem>();
+        items = new ArrayList<PokeBall>();
         numberOfItems = 0;
         total = 0;
     }
 
-    /**
-     * Adds a <code>ShoppingCartItem</code> to the <code>ShoppingCart</code>'s
-     * <code>items</code> list. If item of the specified <code>product</code>
-     * already exists in shopping cart list, the quantity of that item is
-     * incremented.
-     *
-     * @param pokemon the <code>Pokemon</code> that defines the type of shopping cart item
-     * @see ShoppingCartItem
-     */
-    public synchronized void addItem(Pokemon pokemon) {
-
-        boolean newItem = true;
-
-        for (ShoppingCartItem scItem : items) {
-
-            if (scItem.getPokemon().getId() == pokemon.getId()) {
-
-                newItem = false;
-                scItem.incrementQuantity();
-            }
-        }
-
-        if (newItem) {
-            ShoppingCartItem scItem = new ShoppingCartItem(pokemon);
-            items.add(scItem);
-        }
-    }
+   
 
     /**
      * Updates the <code>ShoppingCartItem</code> of the specified
@@ -55,7 +30,7 @@ public class ShoppingCart {
      *
      * @param pokemon the <code>Pokemon</code> that defines the type of shopping cart item
      * @param quantity the number which the <code>ShoppingCartItem</code> is updated to
-     * @see ShoppingCartItem
+     * @see PokeBall
      */
     public synchronized void update(Pokemon pokemon, String quantity) {
 
@@ -66,9 +41,9 @@ public class ShoppingCart {
 
         if (qty >= 0) {
 
-            ShoppingCartItem item = null;
+            PokeBall item = null;
 
-            for (ShoppingCartItem scItem : items) {
+            for (PokeBall scItem : items) {
 
                 if (scItem.getPokemon().getId() == pokemon.getId()) {
 
@@ -94,9 +69,9 @@ public class ShoppingCart {
      * Returns the list of <code>ShoppingCartItems</code>.
      *
      * @return the <code>items</code> list
-     * @see ShoppingCartItem
+     * @see PokeBall
      */
-    public synchronized List<ShoppingCartItem> getItems() {
+    public synchronized List<PokeBall> getItems() {
 
         return items;
     }
@@ -106,13 +81,13 @@ public class ShoppingCart {
      * <code>items</code> list.
      *
      * @return the number of items in shopping cart
-     * @see ShoppingCartItem
+     * @see PokeBall
      */
     public synchronized int getNumberOfItems() {
 
         numberOfItems = 0;
 
-        for (ShoppingCartItem scItem : items) {
+        for (PokeBall scItem : items) {
 
             numberOfItems += scItem.getQuantity();
         }
@@ -125,7 +100,7 @@ public class ShoppingCart {
      * <code>items</code> list, <code>numberOfItems</code> and
      * <code>total</code> are reset to '<code>0</code>'.
      *
-     * @see ShoppingCartItem
+     * @see PokeBall
      */
     public synchronized void clear() {
         items.clear();

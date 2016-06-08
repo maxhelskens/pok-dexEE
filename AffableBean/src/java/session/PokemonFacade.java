@@ -1,6 +1,7 @@
 package session;
 
 import entity.Pokemon;
+import java.util.Random;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -24,4 +25,14 @@ public class PokemonFacade extends AbstractFacade<Pokemon> {
         super(Pokemon.class);
     }
     
+    
+    public Pokemon getRandomPokemon(){
+        Random r = new Random();
+        int Low = 1;
+        int High = 151;
+        int Result = r.nextInt(High-Low) + Low;
+
+        Pokemon randPokemon = this.find(Result);
+        return randPokemon;
+    }
 }

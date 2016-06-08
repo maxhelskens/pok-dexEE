@@ -6,12 +6,12 @@ import entity.Pokemon;
  *
  * @author Max
  */
-public class ShoppingCartItem {
+public class PokeBall {
 
-    Pokemon pokemon;
-    short quantity;
+    private Pokemon pokemon;
+    private short quantity;
 
-    public ShoppingCartItem(Pokemon pokemon) {
+    public PokeBall(Pokemon pokemon) {
         this.pokemon = pokemon;
         quantity = 1;
     }

@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+
 <div id="singleColumn">
 
     <div id="actionBar">
@@ -21,7 +22,8 @@
     </div>
         <div id="cartPage" style="height:451px">
         
-        <c:if test="${!empty cart && cart.numberOfItems != 0}">
+            <c:if test="${!empty cart && cart.numberOfItems != 0}">
+            </c:if>
 
           <table id="cartTable">
 
@@ -33,7 +35,7 @@
                 <th>Action</th>
             </tr>
 
-            <c:forEach var="cartItem" items="${cart.items}" varStatus="iter">
+            <c:forEach var="cartItem" items="${pokemonlist}" varStatus="iter">
 
               <c:set var="pokemon" value="${cartItem.pokemon}"/>
 
@@ -89,6 +91,6 @@
 
           </table>
 
-        </c:if>
+        
     </div>
 </div>

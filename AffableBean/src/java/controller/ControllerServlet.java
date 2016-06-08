@@ -4,12 +4,9 @@ import cart.ShoppingCart;
 import entity.Pokemon;
 import entity.Type;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Collection;
 import java.util.Random;
 import javax.ejb.EJB;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import session.PokedexEJB;
 import session.PokemonFacade;
 import session.TypeFacade;
 
@@ -39,8 +37,12 @@ public class ControllerServlet extends HttpServlet {
     
     @EJB
     private PokemonFacade pokemonFacade;
+    
     @EJB
     private TypeFacade typeFacade;
+    
+    @EJB
+    private PokedexEJB pokedexBean;
 
     private static final long serialVersionUID = 1L;
     private static final String SHOPPING_CART_BEAN_SESION_KEY = "shoppingCart";
@@ -82,7 +84,6 @@ public class ControllerServlet extends HttpServlet {
         Type selectedType;
         Collection<Pokemon> typePokemon;
         
-        
         // if type page is requested
         if (userPath.equals("/type")) {
 
@@ -101,7 +102,7 @@ public class ControllerServlet extends HttpServlet {
                 typePokemon = selectedType.getPokemonCollection();
 
                 // place type pokemon in session scope
-                session.setAttribute("typePokemon", typePokemon);
+                request.setAttribute("typePokemon", typePokemon);
             }
             
         // if allPokemon page is requested
@@ -109,7 +110,7 @@ public class ControllerServlet extends HttpServlet {
 
             userPath = "/allPokemon";
 
-        // if allPokemon page is requested
+        // if pokemon page is requested
         } else if (userPath.equals("/pokemon")) {
 
             // get typeId from request
@@ -120,9 +121,9 @@ public class ControllerServlet extends HttpServlet {
                 // get selected type
                 Pokemon selectedPokemon = pokemonFacade.find(Integer.parseInt(pokemonId));
 
-                // place type pokemon in session scope
-                session.setAttribute("selectedPokemon", selectedPokemon);
-                session.setAttribute("selectedPokemonTypes", selectedPokemon.getTypeCollection());
+                // place type pokemon in request scope
+                request.setAttribute("selectedPokemon", selectedPokemon);
+                request.setAttribute("selectedPokemonTypes", selectedPokemon.getTypeCollection());
             }
             
         // if cart page is requested
@@ -131,28 +132,22 @@ public class ControllerServlet extends HttpServlet {
             String clear = request.getParameter("clear");
 
             if ((clear != null) && clear.equals("true")) {
-
-                ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
-                cart.clear();
+                pokedexBean.clear();
             }
 
             userPath = "/cart";
             
         // if random pokemon is requested
         } else if (userPath.equals("/randomPokemon")) {
-            
             // store random pokemon
-            Random r = new Random();
-            int Low = 1;
-            int High = 151;
-            int Result = r.nextInt(High-Low) + Low;
-
-            Pokemon randPokemon = pokemonFacade.find(Result);
-            session.setAttribute("randPokemon", randPokemon);
-            session.setAttribute("randPokemonTypes", randPokemon.getTypeCollection());
+            Pokemon randPokemon = pokemonFacade.getRandomPokemon();
+            request.setAttribute("randPokemon", randPokemon);
+            request.setAttribute("randPokemonTypes", randPokemon.getTypeCollection());
 
             userPath = "index";
         }
+        
+        session.setAttribute("pokemonlist", pokedexBean.getItems());
         
         String url;
         // use RequestDispatcher to forward request internally
@@ -204,11 +199,11 @@ public class ControllerServlet extends HttpServlet {
             if (!pokemonId.isEmpty()) {
 
                 Pokemon pokemon = pokemonFacade.find(Integer.parseInt(pokemonId));
-                cart.addItem(pokemon);
+                pokedexBean.add(pokemon);
             }
 
-            userPath = "/cart"; 
-
+            userPath = "/cart";
+            
 
         // if updateCart action is called
         } else if (userPath.equals("/updateCart")) {
@@ -218,7 +213,7 @@ public class ControllerServlet extends HttpServlet {
             String quantity = request.getParameter("quantity");
 
             Pokemon pokemon = pokemonFacade.find(Integer.parseInt(pokemonId));
-            cart.update(pokemon, quantity);
+            pokedexBean.update(pokemon, Short.parseShort(quantity));
 
             userPath = "/cart";
             

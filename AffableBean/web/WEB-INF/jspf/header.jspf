@@ -32,7 +32,7 @@
                     <%-- shopping cart widget --%>
                     <div class="headerWidget" id="viewCart">
 
-                        <c:if test="${!empty cart && cart.numberOfItems != 0 &&
+                        <c:if test="${!empty pokemonlist && pokemonlist.size() != 0 &&
                                       !fn:contains(pageContext.request.servletPath,'/cart') &&
                                       requestScope['javax.servlet.forward.servlet_path'] ne '/cart'}">
 
@@ -43,6 +43,7 @@
                             <span class="horizontalMargin">
                                 <a href="viewCart" class="bubble">
                                     <c:choose>
+                                        <!-- TODO fix counter-->
                                       <c:when test="${cart.numberOfItems == null}">
                                         0
                                       </c:when>
