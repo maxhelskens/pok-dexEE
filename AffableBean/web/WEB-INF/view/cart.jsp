@@ -62,24 +62,25 @@
                     <form action="updateCart" method="post" style="margin-top: 20px;">
                         <input type="hidden"
                                name="pokemonId"
-                               value="${pokemon.id}">
+                               value="${pokemon.id}"/>
                         <input type="hidden"
                                value="${cartItem.quantity - 1}"
-                               name="quantity">
+                               name="quantity"/>
                         <input type="submit"
                                name="submit"
-                               value="Release one">
+                               value="Release one"/>
                     </form>
+                               <br/>
                     <form action="updateCart" method="post" style="margin-top: -20px;">
                         <input type="hidden"
                                name="pokemonId"
-                               value="${pokemon.id}">
+                               value="${pokemon.id}"/>
                         <input type="hidden"
                                value="0"
-                               name="quantity">
+                               name="quantity"/>
                         <input type="submit"
                                name="submit"
-                               value="Release all">
+                               value="Release all"/>
                     </form>
                 </td>
               </tr>
