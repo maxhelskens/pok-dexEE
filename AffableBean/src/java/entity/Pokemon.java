@@ -46,72 +46,90 @@ import javax.xml.bind.annotation.XmlTransient;
 public class Pokemon implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    
     @Id
     @Basic(optional = false)
     @NotNull
     @Column(name = "id")
     private Integer id;
+    
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 45)
     @Column(name = "name")
     private String name;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "height")
     private int height;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "weight")
     private int weight;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "hp")
     private int hp;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "attack")
     private int attack;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "defense")
     private int defense;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "specialAttack")
     private int specialAttack;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "specialDefense")
     private int specialDefense;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "speed")
     private int speed;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "total")
     private int total;
+    
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 45)
     @Column(name = "abilityI")
     private String abilityI;
+    
     @Size(max = 45)
     @Column(name = "abilityII")
     private String abilityII;
+    
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 45)
     @Column(name = "gender")
     private String gender;
+    
     @Size(max = 45)
     @Column(name = "evolvesBy")
     private String evolvesBy;
+    
     @Column(name = "evolvesFrom")
     private Integer evolvesFrom;
+   
     @Column(name = "evolvesTo")
     private Integer evolvesTo;
+    
     @JoinTable(name = "pokemon_has_type", joinColumns = {
         @JoinColumn(name = "pokemon_id", referencedColumnName = "id")}, inverseJoinColumns = {
         @JoinColumn(name = "type_id", referencedColumnName = "id")})
