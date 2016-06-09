@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import session.PokedexEJB;
 import session.PokemonFacade;
+import session.SingletonPokemonEJB;
 import session.TypeFacade;
 
 /**
@@ -31,7 +32,8 @@ import session.TypeFacade;
                        "/addToCart",
                        "/viewCart",
                        "/updateCart",
-                       "/randomPokemon"})
+                       "/randomPokemon",
+                       "/featured"})
 
 public class ControllerServlet extends HttpServlet {
     
@@ -43,6 +45,9 @@ public class ControllerServlet extends HttpServlet {
     
     @EJB
     private PokedexEJB pokedexBean;
+    
+    @EJB
+    private SingletonPokemonEJB singletonPokemonEJB;
 
     private static final long serialVersionUID = 1L;
     private static final String SHOPPING_CART_BEAN_SESION_KEY = "shoppingCart";
@@ -80,6 +85,7 @@ public class ControllerServlet extends HttpServlet {
 
         String userPath = request.getServletPath();
         HttpSession session = request.getSession();
+        System.out.println(userPath);
         
         Type selectedType;
         Collection<Pokemon> typePokemon;
@@ -145,6 +151,9 @@ public class ControllerServlet extends HttpServlet {
             request.setAttribute("randPokemonTypes", randPokemon.getTypeCollection());
 
             userPath = "index";
+        }
+        else if(userPath.equals("/featured")){
+            request.setAttribute("featuredPokemon", singletonPokemonEJB.getFeaturedPokemon());
         }
         
         session.setAttribute("pokemonlist", pokedexBean.getItems());
