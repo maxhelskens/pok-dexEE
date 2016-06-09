@@ -82,8 +82,6 @@ public class PokedexEJB {
     }
     
     public List<PokeBall> getItems() {
-        System.out.println("Hello");
-        System.out.println(items.size());
         return items;
     }
     
@@ -105,10 +103,4 @@ public class PokedexEJB {
     public void initialize(){
         this.items = new ArrayList<>();
     }
-
-//    public Pokemon generateRandomPokemon(){
-//    
-//    }
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
 }
