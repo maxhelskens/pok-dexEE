@@ -14,7 +14,7 @@ EJB
 * At least one timer
 	-> experience incrementer
 * --A MDB (Message Driven Bean) with a Message Queue (and some code that posts a message in the queue)--
-* A SOAP web service []
+* A SOAP web service [v]
 	-> Pokemon returner
 * A RESTFul web service []
 	-> Pokemon returner
@@ -43,7 +43,7 @@ Web-client
 
 * Web service clients
     * One client for your own web services
-        * One SOAP client []
+        * One SOAP client [v]
         * One client for the RESTFul service (Json or XML) []
 	-> Same as above
     * One client for another web service, somewhere... []

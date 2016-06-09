@@ -164,6 +164,15 @@ public class SOAP_Client_UI extends javax.swing.JDialog {
         int pokemonID;
         
         pokemonID = Integer.parseInt(jTextField1.getText());
+        
+        jLabel2.setText("");
+        jLabel3.setText("");
+        jLabel4.setText("");
+        jLabel5.setText("");
+        jLabel6.setText("");
+        jLabel7.setText("");
+        jLabel8.setText("");
+        
         if (pokemonID >= 1 && pokemonID <= 151){
             Pokemon requestedPokemon = getPokemonInfo(pokemonID);
             
@@ -191,6 +200,9 @@ public class SOAP_Client_UI extends javax.swing.JDialog {
             if(requestedPokemon.getEvolvesTo() != null){
                 jLabel8.setText("Evolves at/by: " + requestedPokemon.getEvolvesBy() +" into "+ getPokemonInfo(requestedPokemon.getEvolvesTo()).getName());
             }
+        }
+        else {
+            jLabel3.setText("Id needs to be between 0 and 152");
         }
         
     }//GEN-LAST:event_okButtonActionPerformed
