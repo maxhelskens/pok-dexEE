@@ -43,7 +43,7 @@
                             <span class="horizontalMargin">
                                 <a href="viewCart" class="bubble">
                                     <c:choose>
-                                        <!-- TODO fix counter-->
+                                        <%-- TODO fix counter--%>
                                       <c:when test="${cart.numberOfItems == null}">
                                         0
                                       </c:when>

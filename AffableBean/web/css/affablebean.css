@@ -273,28 +273,19 @@ table tr td {
 
 #pokemonLeftHeader {
     text-align: left;
-    width: 180px;
+    width: 50%;
     float: left;
-    background: #ffffff;
-    margin-top: -20px;
-    margin-bottom: 20px;
 }
 
 #pokemonRightHeader {
-    width: 670px;
+    width: 50%;
     text-align: right;
-    float: left;
-    background: #ffffff;
-    margin-top: -32px;
-    margin-left: 180px;
-    margin-bottom: 20px;
+    float: right;
 }
 
 #pokemonFooter {
-    height: 200px;
     text-align: left;
     clear: left;
-    background: #ffffff;
     padding-left: 10px;
     padding-top: 20px;
 }
@@ -302,36 +293,30 @@ table tr td {
 .pokemonFooterLeft{
     width: 155px;
     float: left;
-    background: #ffffff;
 }
 
 .pokemonFooterMiddle{
     width: 40px;
     float: left;
-    background: #ffffff;
 }
 .pokemonFooterRight{
     width: 225px;
     float: left;
-    background: #ffffff;
 }
 
 .pokemonBigFooterLeft{
     width: 145px;
     float: left;
-    background: #ffffff;
 }
 
 .pokemonBigFooterMiddle{
     width: 40px;
     float: left;
-    background: #ffffff;
     padding-top: 10px;
 }
 .pokemonBigFooterRight{
     width: 655px;
     float: left;
-    background: #ffffff;
     padding-top: 10px;
 }
 
@@ -406,7 +391,6 @@ progress[aria-valuenow]:before  {
     height: 180px;
     width: 200px;
     float: left;
-    background: #ffffff;
 }
 
 .pokemonImage {
@@ -420,8 +404,7 @@ progress[aria-valuenow]:before  {
     height: 145px;
     width: 315px;
     float: left;
-    background: #ffffff;
-    padding-left: 10;
+    padding-left: 10px;
 }
 
 .thumbnail {

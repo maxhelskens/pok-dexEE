@@ -11,16 +11,17 @@
 <div class="pokemonHeader">
     <h1>No.${selectedPokemon.id} ${selectedPokemon.name}</h1>
 </div>
-
-<div id="pokemonLeftHeader">
-    <c:if test="${selectedPokemon.id > 1}">
-        <a href="pokemon?${selectedPokemon.id - 1}" class="pokemonlink bubble"> No. ${selectedPokemon.id - 1}</a>
-    </c:if>
-</div>
-<div id="pokemonRightheader">
-    <c:if test="${selectedPokemon.id < 151}">
-        <a href="pokemon?${selectedPokemon.id + 1}" class="pokemonlink bubble"> No. ${selectedPokemon.id + 1}</a>
-    </c:if>
+<div class="pokemonHeader">
+    <div id="pokemonLeftHeader">
+        <c:if test="${selectedPokemon.id > 1}">
+            <a href="pokemon?${selectedPokemon.id - 1}" class="pokemonlink bubble"> No. ${selectedPokemon.id - 1}</a>
+        </c:if>
+    </div>
+    <div id="pokemonRightHeader">
+        <c:if test="${selectedPokemon.id < 151}">
+            <a href="pokemon?${selectedPokemon.id + 1}" class="pokemonlink bubble"> No. ${selectedPokemon.id + 1}</a>
+        </c:if>
+    </div>
 </div>
 
 <div id="pokemonLeftColumn">
@@ -40,7 +41,7 @@
                         .attr('src', '${initParam.pokemonImagePath}back/${selectedPokemon.id}.png');
                 
                     d3.select(switchSide)
-                        .style('font-size', 10)
+                        .style('font-size', '10px')
                         .style('cursor','pointer')
                         .text('show frontside');
                         
@@ -51,7 +52,7 @@
                         .attr('src', '${initParam.pokemonImagePath}${selectedPokemon.id}.png');
                 
                     d3.select(switchSide)
-                        .style('font-size', 10)
+                        .style('font-size', '10px')
                         .style('cursor','pointer')
                         .text('show backside');
                 
@@ -190,7 +191,9 @@
         <progress id="totalStrength" max="680" value="${selectedPokemon.total}"></progress>
         <br/>
     </div>
+</div>
         
+<div id="pokemonFooter" style="font-size: 12px">
     <div class="pokemonBigFooterLeft">
         <br/>
         <text><strong>Catching chance: </strong></text>
