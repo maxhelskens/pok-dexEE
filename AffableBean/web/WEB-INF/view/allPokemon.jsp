@@ -50,8 +50,8 @@
                     </td>
 
                     <td>
-                        <c:if test="${!empty cart && cart.numberOfItems != 0}">
-                            <c:forEach var="cartItem" items="${cart.items}">
+                        <c:if test="${nrofpokemon != 0}">
+                            <c:forEach var="cartItem" items="${caughtpokemon}">
                                 <c:if test="${cartItem.pokemon.id == pokemon.id}">
                                     <img src="img/Pokeball.png" alt="pokeball icon" id="caught">
                                 </c:if>

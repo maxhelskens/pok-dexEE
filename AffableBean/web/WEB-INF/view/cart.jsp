@@ -12,7 +12,7 @@
     <div id="actionBar">
         
         <%-- clear cart widget --%>
-        <c:if test="${!empty cart && cart.numberOfItems != 0}">
+        <c:if test="${nrofpokemon != 0}">
             <a href="viewCart?clear=true" class="bubble hMargin">Release all pokémon</a>
         </c:if>
 
@@ -22,7 +22,7 @@
     </div>
         <div id="cartPage" style="height:451px">
         
-            <c:if test="${!empty cart && cart.numberOfItems != 0}">
+            <c:if test="${nrofpokemon != 0}">
             </c:if>
 
           <table id="cartTable">

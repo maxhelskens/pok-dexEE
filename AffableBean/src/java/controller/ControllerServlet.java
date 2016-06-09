@@ -211,6 +211,9 @@ public class ControllerServlet extends HttpServlet {
                 pokedexBean.add(pokemon);
             }
 
+            session.setAttribute("nrofpokemon", pokedexBean.getNumberOfItems());
+            session.setAttribute("caughtpokemon", pokedexBean.getItems());
+            
             userPath = "/cart";
             
 
@@ -223,6 +226,9 @@ public class ControllerServlet extends HttpServlet {
 
             Pokemon pokemon = pokemonFacade.find(Integer.parseInt(pokemonId));
             pokedexBean.update(pokemon, Short.parseShort(quantity));
+            
+            session.setAttribute("nrofpokemon", pokedexBean.getNumberOfItems());
+            session.setAttribute("caughtpokemon", pokedexBean.getItems());
 
             userPath = "/cart";
             
