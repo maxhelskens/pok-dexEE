@@ -17,7 +17,7 @@
         </c:if>
 
         <%-- continue shopping widget --%>
-        <a href="randomPokemon" class="bubble hMargin">Start catching pokémon</a>
+        <a href="featured" class="bubble hMargin">Catch featured pokémon</a>
         
     </div>
         <div id="cartPage" style="height:451px">
