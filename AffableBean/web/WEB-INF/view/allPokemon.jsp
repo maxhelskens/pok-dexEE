@@ -14,7 +14,7 @@
 
         <table id="productTable">
 
-            <c:forEach var="pokemon" items="${pokemonList}" varStatus="iter">
+            <c:forEach var="pokemon" items="${list}" varStatus="iter">
                 
                 <tr class="${((iter.index % 2) == 0) ? 'lightRed' : 'white'}">
                     <td>

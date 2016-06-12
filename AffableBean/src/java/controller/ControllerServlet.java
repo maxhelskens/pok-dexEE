@@ -116,6 +116,7 @@ public class ControllerServlet extends HttpServlet {
 
             userPath = "/allPokemon";
 
+            request.setAttribute("list", pokemonFacade.findAll());
         // if pokemon page is requested
         } else if (userPath.equals("/pokemon")) {
 
