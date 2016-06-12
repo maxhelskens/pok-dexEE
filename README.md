@@ -5,17 +5,21 @@ Requirements:
 EJB
 ---
 
-* At least one stateless [v] and one stateful [v] EJB session bean
-	-> Stageful bean: Cart aanpassen [v]
-* At least one Singleton bean []
-	-> 
+* At least one stateless and one stateful EJB session bean [v]
+	-> Stateful bean: Cart aanpassen
+
+* At least one Singleton bean [v]
+	-> featured pokemon
+
 * At least one interceptor
 	-> Logger
-* At least one timer
-	-> experience incrementer
-* --A MDB (Message Driven Bean) with a Message Queue (and some code that posts a message in the queue)--
+
+* At least one timer [v]
+	-> featured pokemon
+
 * A SOAP web service [v]
 	-> Pokemon returner
+
 * A RESTFul web service []
 	-> Pokemon returner
 
@@ -23,8 +27,10 @@ JPA
 ---
 
 * A few entity beans, with at least a one-to-many [~] and a many-to-many [v] relationship
-	-> one to many evolves into: evee in vaporeon, jolted en flareon (Vincent)
-* Corresponding tables
+	-> one to many evolves into: groups (Vincent)
+
+* Corresponding tables [?]
+
 * Some "special" JPA annotations (make a selection yourself) []
     (@Enumerated
     @Elementcollection
@@ -34,8 +40,10 @@ JPA
 Web-client
 ----------
 
-- [v] One Servlet 
-- [v] One Filter 
+* One Servlet [v]
+
+* One Filter [v]
+
 * Framework: the choice is up to you
     * Page flow
     * Form & validation & business logic
@@ -46,7 +54,8 @@ Web-client
         * One SOAP client [v]
         * One client for the RESTFul service (Json or XML) []
 	-> Same as above
-    * One client for another web service, somewhere... []
-	-> ?
+
+    * One client for another web service, somewhere... [v]
+	-> pokéapi
 
 * Web framework evaluation: use the template (MVC.html) to fill in your findings

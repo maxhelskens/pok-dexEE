@@ -17,3 +17,6 @@ hs_err_pid*
 /AffableBean/dist/
 genfiles.properties
 
+/Other_REST_Client/build/
+/Pokéapi_Client/nbproject/private/
+/Pokéapi_Client/build/

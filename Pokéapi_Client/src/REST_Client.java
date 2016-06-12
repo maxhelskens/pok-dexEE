@@ -50,24 +50,30 @@ import org.json.JSONObject;
 class MyButton extends JButton {
 
     private boolean isLastButton;
+    private int id;
 
-    public MyButton() {
+    public MyButton(int id) {
 
         super();
-
-        initUI();
+        
+        initUI(id);
     }
 
-    public MyButton(Image image) {
+    public MyButton(Image image, int id) {
 
         super(new ImageIcon(image));
 
-        initUI();
+        initUI(id);
     }
 
-    private void initUI() {
+    public int getId(){
+        return id;
+    }
+    
+    private void initUI(int id) {
 
         isLastButton = false;
+        this.id = id;
         BorderFactory.createLineBorder(Color.gray);
 
         addMouseListener(new MouseAdapter() {
@@ -147,7 +153,9 @@ public class REST_Client extends javax.swing.JFrame {
         height = resized.getHeight(null);
 
         add(panel, BorderLayout.CENTER);
-
+        
+        int blockID = 0;
+        
         for (int i = 0; i < 3; i++) {
 
             for (int j = 0; j < 3; j++) {
@@ -155,11 +163,11 @@ public class REST_Client extends javax.swing.JFrame {
                 image = createImage(new FilteredImageSource(resized.getSource(),
                         new CropImageFilter(j * width / 3, i * height / 3,
                                 (width / 3), height / 3)));
-                MyButton button = new MyButton(image);
+                MyButton button = new MyButton(image, blockID);
                 button.putClientProperty("position", new Point(i, j));
 
                 if (i == 2 && j == 2) {
-                    lastButton = new MyButton();
+                    lastButton = new MyButton(blockID);
                     lastButton.setBorderPainted(false);
                     lastButton.setContentAreaFilled(false);
                     lastButton.setLastButton();
@@ -167,24 +175,61 @@ public class REST_Client extends javax.swing.JFrame {
                 } else {
                     buttons.add(button);
                 }
+                
+                blockID ++;
             }
         }
 
+        System.out.println("Pre Shuffle: " + buttons.size());
+        for (int i = 0; i < buttons.size(); i++){
+            System.out.print(buttons.get(i).getId() + ", ");
+        }
+        
         Collections.shuffle(buttons);
         buttons.add(lastButton);
-
-        for (int i = 0; i < 9; i++) {
+        
+        System.out.println("Aprés Shuffle: " + buttons.size());
+        for (int i = 0; i < buttons.size(); i++){
+            System.out.print(buttons.get(i).getId() + ", ");
+        }
+        
+        if(isSolvable(buttons)){
+            for (int i = 0; i < 9; i++) {
 
             MyButton btn = buttons.get(i);
             panel.add(btn);
             btn.setBorder(BorderFactory.createLineBorder(Color.gray));
             btn.addActionListener((ActionListener) new ClickAction());
+            }
+
+            pack();
+            setTitle("Pokemon Pussle");
+            setResizable(false);
+            setLocationRelativeTo(null);
+        }
+        else {
+            initUI(id);
+        }
+    }
+    
+    // This method takes a two dimensional array representing
+    // a sliding puzzle, and determines if it is solvable.
+    public static boolean isSolvable(ArrayList<MyButton> p) {
+        int inversions = 0;
+
+        for(int i = 0; i < p.size() - 1; i++) {
+            // Check if a larger number exists after the current
+            // place in the array, if so increment inversions.
+            for(int j = i + 1; j < p.size(); j++)
+                if(p.get(i).getId() > p.get(j).getId()) inversions++;
+
+            // Determine if the distance of the blank space from the bottom 
+            // right is even or odd, and increment inversions if it is odd.
+            if(p.get(i).getId() == 0 && i % 2 == 1) inversions++;
         }
 
-        pack();
-        setTitle("Pokemon Pussle");
-        setResizable(false);
-        setLocationRelativeTo(null);
+        // If inversions is even, the puzzle is solvable.
+        return (inversions % 2 == 0);
     }
 
     private int getNewHeight(int w, int h) {
