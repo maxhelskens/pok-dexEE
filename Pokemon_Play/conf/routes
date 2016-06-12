@@ -1,0 +1,13 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+GET     /pokemons                    controllers.Application.getPokemons
+GET     /pokemon/:id                     controllers.Application.pokemon(id: Integer)
+GET     /pokemon/:id/edit                   controllers.Application.pokemonEdit(id: Integer)
+POST    /pokemon-add                     controllers.Application.addPokemon()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

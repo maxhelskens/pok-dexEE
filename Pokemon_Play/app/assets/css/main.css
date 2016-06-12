@@ -1,0 +1,429 @@
+
+/* 
+ *  html tags Pokemon
+ */
+
+@font-face {
+    font-family: pokemonFont;
+    src: url("../fonts/Pokemon.ttf");
+}
+
+h1, text, h2, h3, a {
+    font-family: pokemonFont;
+}
+
+body {
+    width: 850px;
+    text-align: center;
+    margin: 20px auto;
+    background-image: url("../img/background.png");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;              /* optional, center the image */
+    color: #444;
+}
+
+#main { 
+    width: 850px;
+    height: 671px;
+    background: #ffffff;
+    border:10px solid black;
+}
+
+/*
+ *  Header 
+ */
+
+#header {
+    width: 850px;
+    height: 130px;
+}
+
+#widgetBar {
+    height: 50px;
+    width: 100%;
+    float: right;
+}
+
+.headerWidget {
+    width: 40%;
+    text-align: right;
+    margin: 20px 0;
+    font-size: small;
+    float: right;
+    line-height: 25px;
+}
+
+#viewCart {
+    text-align: left;
+    width: 260px;
+}
+
+#pokeball {
+    width: 25px;
+    position: absolute;
+    margin: -2px 0 0 2px;
+}
+
+#logo {
+    width: 105px;
+    float: left;
+    margin-left: 30px;
+    margin-top: -25px;
+}
+
+#logoText {
+    float: left;
+    margin: 20px 0 0 0px;
+    /* font styles apply to text within img alt attribute */
+    font-size: 30px;
+    color: #333;
+}
+
+/*
+ *  Index Page 
+ */
+
+#typerow {
+    text-align: left;
+    width: 100%;
+    margin: 5px 5px 0 30px;
+    float: left;
+}
+
+.typeBox {
+    margin: 10px 7px;
+    float: inherit;
+}
+
+.typeImage {
+    padding: 1px;
+}
+
+#caught {
+    width: 56px;
+}
+
+#wildPokemonTitle {
+    width: 100%;
+    height: 10%;
+    background: #ffffff;
+    float: left;
+}
+
+#wildPokemonTitleText {
+    font-size: 25;
+}
+
+#wildPokemonRow {
+    width: 100%;
+    height: 211px;
+    float: left;
+}
+
+#wildPokemonInfo {
+    width: 67%;
+    height: 100%;
+    background: #ffffff;
+    float: left;
+    text-align: left;
+}
+
+.pokemonLeft{
+    width: 145px;
+    float: left;
+    background: #ffffff;
+}
+
+.pokemonMiddle{
+    width: 55px;
+    float: left;
+    background: #ffffff;
+}
+.pokemonRight{
+    width: 330px;
+    float: left;
+    background: #ffffff;
+}
+
+#wildPokemonImageholder {
+    width: 33%;
+    height: 100%;
+    background: #ffffff;
+    float: left;
+}
+
+.wildPokemonImage {
+    width: 190px;
+    padding: 1px;
+    margin-top: 10px;
+}
+
+#trainerRow {
+    width: 100%;
+    height: 212px;
+    float: left;
+}
+
+#trainerAction {
+    width: 66%;
+    height: 100%;
+    background-color: #ffffff;
+    background-image: url("../img/catchBox.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    text-align: left;
+}
+
+#catchButton{
+    cursor: pointer;
+}
+
+#trainerImageholder {
+    width: 33%;
+    height: 100%;
+    background: #ffffff;
+    float: left;
+}
+
+
+
+
+
+#wildPokemonText {
+    margin: 30px 5px 0 30px;
+    line-height: 1.4em;
+}
+
+#pokémonInformation {
+    background-color: #eeeeee;
+    height: 115px;
+    width: 655px;
+    padding-left: 140px;
+    margin-left: -3px;
+    margin-top: -130px;
+}
+
+#pokémonInformation2 {
+    margin-top: -50px;
+    margin-left: 300px;
+    margin-right: 10px;
+}
+
+#pokémonInformation3 {
+    margin-top: -70px;
+    margin-left: 500px;
+    margin-right: 10px;
+}
+
+#wildPokemonTitle {
+    padding-top: 5px;
+}
+
+#wildPokemonTyperow {
+    text-align: left;
+    margin: -7px 0 0 -8px;
+    float: left;
+}
+
+/*
+ *  Type Page
+ */
+
+#typePage {
+    width: 100%;
+    height: 480px;
+    overflow-y: scroll; 
+}
+
+#selectedType {
+    opacity: 0.2;
+}
+
+table tr td a {
+    display:block;
+    height:100%;
+    width:100%;
+}
+
+table tr td {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*
+ *  Pokemon page
+ */
+
+.pokemonHeader {
+    background: #ffffff;
+}
+
+.pokemonlink {
+    font-size: 12px;
+}
+
+#pokemonLeftHeader {
+    text-align: left;
+    width: 50%;
+    float: left;
+}
+
+#pokemonRightHeader {
+    width: 50%;
+    text-align: right;
+    float: right;
+}
+
+#pokemonFooter {
+    text-align: left;
+    clear: left;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.pokemonFooterLeft{
+    width: 155px;
+    float: left;
+}
+
+.pokemonFooterMiddle{
+    width: 40px;
+    float: left;
+}
+.pokemonFooterRight{
+    width: 225px;
+    float: left;
+}
+
+.pokemonBigFooterLeft{
+    width: 145px;
+    float: left;
+}
+
+.pokemonBigFooterMiddle{
+    width: 40px;
+    float: left;
+    padding-top: 10px;
+}
+.pokemonBigFooterRight{
+    width: 655px;
+    float: left;
+    padding-top: 10px;
+}
+
+progress,          /* All HTML5 progress enabled browsers */
+progress[role]     /* polyfill */
+{
+
+    /* Turns off styling - not usually needed, but good to know. */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    /* gets rid of default border in Firefox and Opera. */ 
+    border: none;
+
+    /* Needs to be in here for Safari polyfill so background images work as expected. */
+    background-size: auto;
+
+    /* Dimensions */
+    width: 212px;
+    height: 10px;
+    transform:  translateY(-40%);
+	
+}
+
+/* Polyfill */
+progress[role]:after {
+    background-image: none; /* removes default background from polyfill */
+}
+
+/* Ensure fallback text doesn't appear in polyfill */
+progress[role] strong {
+    display: none;
+}
+
+progress,                          /* Firefox  */ 
+progress[role][aria-valuenow] {    /* Polyfill */
+   background: #eeeeee !important; /* !important is needed by the polyfill */
+}
+
+/* Chrome */
+progress::-webkit-progress-bar {
+    background: #eeeeee;
+}
+
+/* IE10 */
+progress {
+    color: #333333;
+}
+
+/* Firefox */
+progress::-moz-progress-bar { 
+    background: #333333;	
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: #333333;
+}
+
+/* Polyfill */
+progress[aria-valuenow]:before  {
+    background: #333333;
+}
+
+#totalStrength {
+    width: 630px;
+    margin-left: 10px;
+}
+
+#pokemonLeftColumn {
+    height: 180px;
+    width: 200px;
+    float: left;
+}
+
+.pokemonImage {
+    width: 160px;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+#pokemonRightColumn {
+    text-align: left;
+    height: 145px;
+    width: 315px;
+    float: left;
+    padding-left: 10px;
+}
+
+.thumbnail {
+    height: 20px;
+    transform:  translateY(30%);
+}
+
+#pokemonTyperow {
+    text-align: left;
+    width: 325px;
+    margin: -7px 0 0 2px;
+    float: left;
+}
+
+#cry {
+    height: 20px;
+    transform:  translateY(30%);
+}
+
+/*
+ *  Cart Page
+ */
+#cartPage {
+    width: 100%;
+    height: 440px;
+    overflow-y: scroll;
+}
+

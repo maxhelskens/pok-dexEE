@@ -1,0 +1,44 @@
+@(pokeForm: Form[Pokemon], types : Map[String, String])
+
+@main("Wie is deze Pokemon?") {
+    @if(pokeForm.hasGlobalErrors) {
+        <p class="error">
+            @for(error <- pokeForm.globalErrors) {
+                <p>error.messages</p>
+            }
+        </p>
+    }
+
+    @helper.form(action = routes.Application.addPokemon()) {
+        @helper.inputText(pokeForm("name"))
+        @helper.inputText(pokeForm("id"))
+        @helper.inputText(pokeForm("height"))
+        
+        @helper.inputText(pokeForm("weight"))
+        @helper.inputText(pokeForm("hp"))
+        @helper.inputText(pokeForm("attack"))
+        @helper.inputText(pokeForm("defense"))
+        @helper.inputText(pokeForm("specialAttack"))
+        @helper.inputText(pokeForm("specialDefense"))
+        @helper.inputText(pokeForm("speed"))
+        @helper.inputText(pokeForm("total"))
+        @helper.inputText(pokeForm("abilityI"))
+        @helper.inputText(pokeForm("abilityII"))
+        @helper.inputText(pokeForm("gender"))
+        @helper.inputText(pokeForm("evolvesBy"))
+        
+        @for(error <- pokeForm("typeCollection[0]").errors) {
+            <p>@Messages(error.messages, error.arguments.toArray: _*)</p>
+        }
+        
+        @helper.inputCheckboxGroup(
+            field = pokeForm("typeCollection"),
+            helper.options(types),
+            '_label -> "Type",
+            '_error -> pokeForm("typeCollection").error.map(_.withMessage("Select one or more type"))
+        )
+            
+        <input type="submit" value="Save"/>
+    }
+}
+
