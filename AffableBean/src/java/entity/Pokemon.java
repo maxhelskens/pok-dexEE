@@ -296,6 +296,7 @@ public class Pokemon implements Serializable {
         this.evolvesFrom = evolvesFrom;
     }
 
+    @XmlTransient
     public Collection<Pokemon> getEvolvesTo() {
         return evolvesTo;
     }
