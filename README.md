@@ -26,16 +26,17 @@ EJB
 JPA
 ---
 
-* A few entity beans, with at least a one-to-many [~] and a many-to-many [v] relationship
-	-> one to many evolves into: groups (Vincent)
-
-* Corresponding tables [?]
+* A few entity beans, with at least a one-to-many [v] and a many-to-many [v] relationship
+	-> one to many groups (Vincent)
+    -> many to many: evolves into and type
+    
+* Corresponding tables [v]
 
 * Some "special" JPA annotations (make a selection yourself) []
-    (@Enumerated
-    @Elementcollection
-    @Inheritance
-    @Embeddable/@Embedded)
+    (@Enumerated [v]
+    --@Elementcollection--
+    --@Inheritance--
+    @Embeddable/@Embedded [~])
 
 Web-client
 ----------
@@ -44,10 +45,12 @@ Web-client
 
 * One Filter [v]
 
-* Framework: the choice is up to you
-    * Page flow
-    * Form & validation & business logic
+* Framework: the choice is up to you [~]
+    * Page flow []
+    * Form & validation & business logic []
+    * Web framework evaluation: use the template (MVC.html) to fill in your findings  []
 	-> Vincent
+    
 
 * Web service clients
     * One client for your own web services
@@ -58,4 +61,4 @@ Web-client
     * One client for another web service, somewhere... [v]
 	-> pokéapi
 
-* Web framework evaluation: use the template (MVC.html) to fill in your findings
+
