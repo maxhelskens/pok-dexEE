@@ -23,3 +23,9 @@ New client attempting to connect on port: 44894-38682
 This client on port 44894 has uuid 558db1fd-6d46-44c5-bcb9-13950f858698 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
 Connected Clients: activator-05afdb75-3c94-4a6e-89ed-a09557f37f1c, play-fork-run-558db1fd-6d46-44c5-bcb9-13950f858698
 Taking next connection to: 38682
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 38682
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 38682
