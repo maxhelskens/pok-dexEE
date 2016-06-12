@@ -1,6 +1,7 @@
 package controller;
 
 import cart.ShoppingCart;
+import entity.PokeGroup;
 import entity.Pokemon;
 import entity.Type;
 import java.io.IOException;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import session.PokeGroupFacade;
 import session.PokedexEJB;
 import session.PokemonFacade;
 import session.SingletonPokemonEJB;
@@ -33,7 +35,8 @@ import session.TypeFacade;
                        "/viewCart",
                        "/updateCart",
                        "/randomPokemon",
-                       "/featured"})
+                       "/featured",
+                       "/group"})
 
 public class ControllerServlet extends HttpServlet {
     
@@ -42,6 +45,9 @@ public class ControllerServlet extends HttpServlet {
     
     @EJB
     private TypeFacade typeFacade;
+    
+    @EJB
+    private PokeGroupFacade groupFacade;
     
     @EJB
     private PokedexEJB pokedexBean;
@@ -113,10 +119,9 @@ public class ControllerServlet extends HttpServlet {
             
         // if allPokemon page is requested
         } else if (userPath.equals("/viewAll")) {
-
             userPath = "/allPokemon";
-
             request.setAttribute("list", pokemonFacade.findAll());
+            request.setAttribute("pokeGroups", groupFacade.findAll());
         // if pokemon page is requested
         } else if (userPath.equals("/pokemon")) {
 
@@ -155,6 +160,11 @@ public class ControllerServlet extends HttpServlet {
         }
         else if(userPath.equals("/featured")){
             request.setAttribute("featuredPokemon", singletonPokemonEJB.getFeaturedPokemon());
+        }
+        else if(userPath.equals("/group")){
+            long groupId = Long.parseLong(request.getQueryString());
+            PokeGroup pokeGroup = groupFacade.find(groupId);
+            request.setAttribute("group", pokeGroup);
         }
         
         session.setAttribute("pokemonlist", pokedexBean.getItems());

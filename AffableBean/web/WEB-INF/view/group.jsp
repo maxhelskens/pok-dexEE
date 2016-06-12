@@ -1,30 +1,11 @@
-<%--
-    Document   : cart
-    Created on : May 23, 2016, 3:59:32 PM
-    Author     : max
---%>
-
+<%@page contentType="text/html" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <div id="typePage" style="height: 520px">
-
     <div id="categoryRightColumn">
-        <h1>Groups</h1>
-        <ul>
-            <c:forEach var="pokeGroup" items="${pokeGroups}" varStatus="iter">
-                <li>
-                    <a href="group?${pokeGroup.id}">${pokeGroup.name}</a>
-                </li>
-            </c:forEach>
-        </ul>
-        
-        <h1>All Pokemon</h1>
+         <h1>${group.name} (${group.region} region)</h1>
         <table id="productTable">
-
-            <c:forEach var="pokemon" items="${list}" varStatus="iter">
-                
+            <c:forEach var="pokemon" items="${group.pokemons}" varStatus="iter">
                 <tr class="${((iter.index % 2) == 0) ? 'lightRed' : 'white'}">
                     <td>
                         <a href="pokemon?${pokemon.id}">
@@ -34,9 +15,7 @@
                     </td>
 
                     <td>
-                        <a href="pokemon?${pokemon.id}">
-                            ${pokemon.name}
-                        </a>
+                        <a href="pokemon?${pokemon.id}">${pokemon.name}</a>
                     </td>
 
                     <td>
@@ -68,10 +47,7 @@
                         </c:if>
                     </td>
                 </tr>
-
             </c:forEach>
-
         </table>
     </div>
 </div>
-

@@ -2,6 +2,7 @@ package entity;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -132,7 +133,7 @@ public class Pokemon implements Serializable {
     private Pokemon evolvesFrom;
     
     
-    @OneToMany
+    @ManyToMany
     private Collection<Pokemon> evolvesTo;
     
 //    @Column(name = "evolvesTo")
@@ -142,7 +143,7 @@ public class Pokemon implements Serializable {
         @JoinColumn(name = "pokemon_id", referencedColumnName = "id")}, inverseJoinColumns = {
         @JoinColumn(name = "type_id", referencedColumnName = "id")})
     @ManyToMany
-    private Collection<Type> typeCollection;
+    private List<Type> typeCollection;
 
     public Pokemon() {
     }
@@ -304,11 +305,11 @@ public class Pokemon implements Serializable {
     }
 
     @XmlTransient
-    public Collection<Type> getTypeCollection() {
+    public List<Type> getTypeCollection() {
         return typeCollection;
     }
 
-    public void setTypeCollection(Collection<Type> typeCollection) {
+    public void setTypeCollection(List<Type> typeCollection) {
         this.typeCollection = typeCollection;
     }
 
