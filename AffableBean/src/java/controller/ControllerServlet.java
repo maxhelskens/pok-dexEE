@@ -71,14 +71,6 @@ public class ControllerServlet extends HttpServlet {
         // store type list in servlet context
         getServletContext().setAttribute("types", typeFacade.findAll());
         
-        // store random pokemon in servlet context
-        Random r = new Random();
-        int Low = 1;
-        int High = 151;
-        int Result = r.nextInt(High-Low) + Low;
-        
-        getServletContext().setAttribute("randPokemon", pokemonFacade.find(Result));
-        
         // store pokemon list in servlet context
         getServletContext().setAttribute("pokemonList", pokemonFacade.findAll());
     }
@@ -155,7 +147,7 @@ public class ControllerServlet extends HttpServlet {
             userPath = "/cart";
             
         // if random pokemon is requested
-        } else if (userPath.equals("/randomPokemon")) {
+        } else if (userPath.equals("/randomPokemon") || userPath.equals("/index")) {
             // store random pokemon
             Pokemon randPokemon = pokemonFacade.getRandomPokemon();
             request.setAttribute("randPokemon", randPokemon);

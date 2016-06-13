@@ -25,6 +25,10 @@
             30
         </session-timeout>
     </session-config>
+    <welcome-file-list>
+        <welcome-file>index</welcome-file>
+        <!-- Sends the request for context root (/) to pattern /index -->
+    </welcome-file-list>
     <jsp-config>
         <jsp-property-group>
             <description>header and footer settings</description>
