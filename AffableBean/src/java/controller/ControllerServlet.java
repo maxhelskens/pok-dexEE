@@ -1,6 +1,5 @@
 package controller;
 
-import cart.ShoppingCart;
 import entity.PokeGroup;
 import entity.Pokemon;
 import entity.Type;
@@ -56,7 +55,6 @@ public class ControllerServlet extends HttpServlet {
     private SingletonPokemonEJB singletonPokemonEJB;
 
     private static final long serialVersionUID = 1L;
-    private static final String SHOPPING_CART_BEAN_SESION_KEY = "shoppingCart";
     
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
@@ -199,25 +197,13 @@ public class ControllerServlet extends HttpServlet {
 
         String userPath = request.getServletPath();
         HttpSession session = request.getSession();
-        ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
-
+        
         // if addToCart action is called
         if (userPath.equals("/addToCart")) {
-
-            // if user is adding item to cart for first time
-            // create cart object and attach it to user session
-            
-            if (cart == null) {
-
-                cart = new ShoppingCart();
-                session.setAttribute("cart", cart);
-            }
-
             // get user input from request
             String pokemonId = request.getParameter("pokemonId");
 
             if (!pokemonId.isEmpty()) {
-
                 Pokemon pokemon = pokemonFacade.find(Integer.parseInt(pokemonId));
                 pokedexBean.add(pokemon);
             }
