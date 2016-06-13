@@ -104,13 +104,13 @@ public class ControllerServlet extends HttpServlet {
                 // get selected type
                 selectedType = typeFacade.find(Integer.parseInt(typeId));
 
-                // place selected type in session scope
-                session.setAttribute("selectedType", selectedType);
+                // place selected type in request scope
+                request.setAttribute("selectedType", selectedType);
 
                 // get all pokemon for selected type
                 typePokemon = selectedType.getPokemonCollection();
 
-                // place type pokemon in session scope
+                // place type pokemon in request scope
                 request.setAttribute("typePokemon", typePokemon);
             }
             
