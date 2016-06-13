@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.Stateful;
+import javax.enterprise.context.SessionScoped;
 import javax.interceptor.Interceptors;
 
 /**
@@ -14,6 +15,7 @@ import javax.interceptor.Interceptors;
  * @author Vincent
  */
 @Stateful
+@SessionScoped
 public class PokedexEJB {
 
     private List<PokeBall> items;

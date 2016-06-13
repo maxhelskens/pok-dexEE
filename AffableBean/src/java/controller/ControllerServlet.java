@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.Random;
 import javax.ejb.EJB;
+import javax.inject.Inject;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -48,8 +49,14 @@ public class ControllerServlet extends HttpServlet {
     @EJB
     private PokeGroupFacade groupFacade;
     
-    @EJB
+    @Inject
     private PokedexEJB pokedexBean;
+    /* With @EJB the bean is loaded when the servlet is started.
+       But the serlvet is shared between requests, so different sessions use the same
+       stateful bean. This is not what we want.
+       Using @Inject here, and @SessionScoped on the EJB we get what we want:
+       Dependening on the session a different - the correct - Stateful Bean is used.
+     */
     
     @EJB
     private SingletonPokemonEJB singletonPokemonEJB;

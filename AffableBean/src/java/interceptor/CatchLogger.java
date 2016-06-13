@@ -5,6 +5,7 @@
  */
 package interceptor;
 
+import java.io.Serializable;
 import java.util.logging.Logger;
 import javax.inject.Inject;
 import javax.interceptor.AroundConstruct;
@@ -16,7 +17,7 @@ import javax.interceptor.InvocationContext;
  *
  * @author matthias
  */
-public class CatchLogger {
+public class CatchLogger implements Serializable{
     @Inject
     private Logger logger;
     
