@@ -1,22 +1,22 @@
-New log file opened at Sun Jun 12 15:44:45 CEST 2016 by 8931@VinnniesLaptop
-jvm 8931@VinnniesLaptop
-jvm vmName=OpenJDK 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.92-b14
+New log file opened at Mon Jun 13 10:05:32 CEST 2016 by 1140@lwap-conf-bladelin-1.defaultdomain
+jvm 1140@lwap-conf-bladelin-1.defaultdomain
+jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.25-b02
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
-jvm arguments: [-Xms256m, -Xmx1024m]
+jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
 Starting event engine
 Starting sbt command engine
 Waiting for sbt command engine
 Command engine arguments=List()
-Command engine baseDirectory=/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play
+Command engine baseDirectory=/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play
 Command engine initial remaining commands List(--initialize, onFailure load-failed, boot, server-send-ready-for-request, server-handle-next-server-request)
 > --initialize
 > initialize
 > onFailure load-failed
 > boot
 > reload
-[Loading] Scanning directory /home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/project
+[Loading] Scanning directory /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/project
 [Loading] Found non-root projects 
-[Loading] Done in /home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/project, returning: ()
+[Loading] Done in /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/project, returning: ()
 deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))))
   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.JUnitXmlReportPlugin)
 sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
@@ -25,9 +25,9 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin) not found List(sbt.plugins.JUnitXmlReportPlugin)
   :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin) not found List()
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
-[Loading] Done in /home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/project, returning: (pokemon_play-build)
-Loading project definition from /home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@411d3937, check cycles: false
+[Loading] Done in /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/project, returning: (pokemon_play-build)
+Loading project definition from /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/project
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@5cfac346, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -46,9 +46,9 @@ All initially invalidated sources: Set()
 
 Copy resource mappings: 
 	
-[Loading] Scanning directory /home/vincent/Development/Repos/pok-dexEE/Pokemon_Play
+[Loading] Scanning directory /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play
 [Loading] Found root project root w/ remaining 
-deducing auto plugins based on known facts Set(Atom(play.sbt.PlayJava), Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.sbt.Play),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.routes.RoutesCompiler))), Clause(Atom(play.sbt.Play),Set(Atom(play.twirl.sbt.SbtTwirl))), Clause(Atom(play.sbt.Play),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(play.sbt.PlayAkkaHttpServer),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayJava),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayLayoutPlugin),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayLogback),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayNettyServer),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayScala),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.routes.RoutesCompiler),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.twirl.sbt.SbtTwirl),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.AkkaAppPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.docker.DockerPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.jar.ClasspathJarPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.jar.LauncherJarPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.debian.DebianDeployPlugin),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.debian.DebianPlugin),Set(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin))), Clause(Atom(com.typesafe.sbt.packager.debian.JDebPackaging),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.docker.DockerPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerDeployPlugin),Set(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.jar.LauncherJarPlugin))), Clause(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.rpm.RpmDeployPlugin),Set(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin))), Clause(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin),Set(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin))), Clause(Atom(com.typesafe.sbt.packager.universal.UniversalDeployPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin),Set(Atom(com.typesafe.sbt.SbtNativePackager))), Clause(Atom(com.typesafe.sbt.packager.windows.WindowsDeployPlugin),Set(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin))), Clause(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.less.SbtLess),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.jshint.SbtJSHint),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.rjs.SbtRjs),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.digest.SbtDigest),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.mocha.SbtMocha),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(org.irundaia.sbt.sass.SbtSassify),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.play.sbt.enhancer.PlayEnhancer),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.BackgroundRunPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.PlayLayoutPlugin))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.PlayLogback))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.PlayNettyServer))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.less.SbtLess))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jshint.SbtJSHint))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.rjs.SbtRjs))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.digest.SbtDigest))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.mocha.SbtMocha))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(org.irundaia.sbt.sass.SbtSassify))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(com.typesafe.play.sbt.enhancer.PlayEnhancer))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.InteractionServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SendEventServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(And(Set(Atom(sbt.plugins.BackgroundRunPlugin), Atom(play.sbt.Play), Atom(sbt.plugins.SerializersPlugin))),Set(Atom(play.sbt.forkrun.PlayForkRun)))))
+deducing auto plugins based on known facts Set(Atom(play.sbt.PlayJava), Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(Atom(play.sbt.Play),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.routes.RoutesCompiler))), Clause(Atom(play.sbt.Play),Set(Atom(play.twirl.sbt.SbtTwirl))), Clause(Atom(play.sbt.Play),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(play.sbt.PlayAkkaHttpServer),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayJava),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayLayoutPlugin),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayLogback),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayNettyServer),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayScala),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.routes.RoutesCompiler),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.twirl.sbt.SbtTwirl),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.AkkaAppPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.docker.DockerPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.jar.ClasspathJarPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.jar.LauncherJarPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.debian.DebianDeployPlugin),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.debian.DebianPlugin),Set(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin))), Clause(Atom(com.typesafe.sbt.packager.debian.JDebPackaging),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.docker.DockerPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerDeployPlugin),Set(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.jar.LauncherJarPlugin))), Clause(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.rpm.RpmDeployPlugin),Set(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin))), Clause(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin),Set(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin))), Clause(Atom(com.typesafe.sbt.packager.universal.UniversalDeployPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin),Set(Atom(com.typesafe.sbt.SbtNativePackager))), Clause(Atom(com.typesafe.sbt.packager.windows.WindowsDeployPlugin),Set(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin))), Clause(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(sbt.plugins.BackgroundRunPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.less.SbtLess),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.jshint.SbtJSHint),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.rjs.SbtRjs),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.digest.SbtDigest),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.mocha.SbtMocha),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(org.irundaia.sbt.sass.SbtSassify),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.play.sbt.enhancer.PlayEnhancer),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(And(Set(Atom(sbt.plugins.BackgroundRunPlugin), Atom(play.sbt.Play), Atom(sbt.plugins.SerializersPlugin))),Set(Atom(play.sbt.forkrun.PlayForkRun))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.PlayLayoutPlugin))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.PlayLogback))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.PlayNettyServer))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.InteractionServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SendEventServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.less.SbtLess))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jshint.SbtJSHint))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.rjs.SbtRjs))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.digest.SbtDigest))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.mocha.SbtMocha))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(org.irundaia.sbt.sass.SbtSassify))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(com.typesafe.play.sbt.enhancer.PlayEnhancer)))))
   :: deduced result: Matched(sbt.plugins.CorePlugin,play.sbt.PlayJava,sbt.plugins.InteractionServicePlugin,sbt.plugins.SendEventServicePlugin,play.sbt.Play,sbt.plugins.SerializersPlugin,sbt.plugins.IvyPlugin,com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging,play.twirl.sbt.SbtTwirl,sbt.plugins.JvmPlugin,play.sbt.PlayNettyServer,play.sbt.PlayLayoutPlugin,play.sbt.routes.RoutesCompiler,play.sbt.PlayLogback,com.typesafe.sbt.jse.SbtJsTask,com.typesafe.sbt.jshint.SbtJSHint,com.typesafe.play.sbt.enhancer.PlayEnhancer,com.typesafe.sbt.packager.archetypes.JavaAppPackaging,sbt.plugins.JUnitXmlReportPlugin,com.typesafe.sbt.mocha.SbtMocha,com.typesafe.sbt.less.SbtLess,com.typesafe.sbt.rjs.SbtRjs,com.typesafe.sbt.jse.SbtJsEngine,com.typesafe.sbt.coffeescript.SbtCoffeeScript,sbt.plugins.BackgroundRunPlugin,com.typesafe.sbt.packager.rpm.RpmPlugin,com.typesafe.sbt.packager.windows.WindowsPlugin,com.typesafe.sbt.web.SbtWeb,com.typesafe.sbt.packager.docker.DockerPlugin,play.sbt.forkrun.PlayForkRun,com.typesafe.sbt.packager.debian.DebianPlugin,org.irundaia.sbt.sass.SbtSassify,com.typesafe.sbt.digest.SbtDigest,com.typesafe.sbt.packager.universal.UniversalPlugin,com.typesafe.sbt.packager.linux.LinuxPlugin,com.typesafe.sbt.SbtNativePackager)
 sorting: ns: List(sbt.plugins.CorePlugin, play.sbt.PlayJava, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, play.sbt.Play, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, play.twirl.sbt.SbtTwirl, sbt.plugins.JvmPlugin, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.routes.RoutesCompiler, play.sbt.PlayLogback, com.typesafe.sbt.jse.SbtJsTask, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.play.sbt.enhancer.PlayEnhancer, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.coffeescript.SbtCoffeeScript, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.docker.DockerPlugin, play.sbt.forkrun.PlayForkRun, com.typesafe.sbt.packager.debian.DebianPlugin, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.universal.UniversalPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, com.typesafe.sbt.SbtNativePackager)
   :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager) not found List(play.sbt.PlayJava, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, play.sbt.Play, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, play.twirl.sbt.SbtTwirl, sbt.plugins.JvmPlugin, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.routes.RoutesCompiler, play.sbt.PlayLogback, com.typesafe.sbt.jse.SbtJsTask, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.play.sbt.enhancer.PlayEnhancer, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.coffeescript.SbtCoffeeScript, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.docker.DockerPlugin, play.sbt.forkrun.PlayForkRun, com.typesafe.sbt.packager.debian.DebianPlugin, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.universal.UniversalPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin)
@@ -60,16 +60,63 @@ sorting: ns: List(sbt.plugins.CorePlugin, play.sbt.PlayJava, sbt.plugins.Interac
   :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.packager.docker.DockerPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, play.twirl.sbt.SbtTwirl, play.sbt.routes.RoutesCompiler, com.typesafe.play.sbt.enhancer.PlayEnhancer, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.debian.DebianPlugin, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, com.typesafe.sbt.jse.SbtJsEngine, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, com.typesafe.sbt.jse.SbtJsTask, play.sbt.Play, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript) not found List(play.sbt.PlayJava, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.PlayLogback, play.sbt.forkrun.PlayForkRun)
   :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.packager.docker.DockerPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, play.twirl.sbt.SbtTwirl, play.sbt.routes.RoutesCompiler, com.typesafe.play.sbt.enhancer.PlayEnhancer, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.debian.DebianPlugin, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, com.typesafe.sbt.jse.SbtJsEngine, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, com.typesafe.sbt.jse.SbtJsTask, play.sbt.Play, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, play.sbt.PlayJava, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.PlayLogback, play.sbt.forkrun.PlayForkRun) not found List()
   :: sorted deduced result: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.packager.docker.DockerPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, play.twirl.sbt.SbtTwirl, play.sbt.routes.RoutesCompiler, com.typesafe.play.sbt.enhancer.PlayEnhancer, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.debian.DebianPlugin, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, com.typesafe.sbt.jse.SbtJsEngine, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, com.typesafe.sbt.jse.SbtJsTask, play.sbt.Play, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, play.sbt.PlayJava, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.PlayLogback, play.sbt.forkrun.PlayForkRun)
-[Loading] Done in /home/vincent/Development/Repos/pok-dexEE/Pokemon_Play, returning: (root)
-Set current project to Pokemon_Play (in build file:/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/)
+[Loading] Done in /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play, returning: (root)
+Set current project to Pokemon_Play (in build file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/)
 Reapplying settings...
-Set current project to Pokemon_Play (in build file:/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/)
+Set current project to Pokemon_Play (in build file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/)
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-> {file:/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/}root/compile:discoveredMainClasses
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@67e92215, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes...
+Compiling 1 Scala source to /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 63f5c1e0, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/classes:/Users/Max/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes:/Users/Max/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/Max/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/Max/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.18.2-GA.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/Max/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/Max/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.7.jar:/Users/Max/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.7.jar:/Users/Max/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.19.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.2.jar:/Users/Max/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.8.1.jar:/Users/Max/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.7.1.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.4.jar:/Users/Max/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.19.jar:/Users/Max/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.19.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-stream_2.11/jars/akka-stream_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.7.0.jar:/Users/Max/.ivy2/cache/com.typesafe/ssl-config-akka_2.11/bundles/ssl-config-akka_2.11-0.2.1.jar:/Users/Max/.ivy2/cache/com.typesafe/ssl-config-core_2.11/bundles/ssl-config-core_2.11-0.2.1.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/Max/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/Max/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/Max/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/Max/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/Max/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/Max/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/Max/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.16.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.2.4.Final.jar:/Users/Max/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/Max/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/Max/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.1.0.jar:/Users/Max/.ivy2/cache/javax.el/javax.el-api/jars/javax.el-api-3.0.0.jar:/Users/Max/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.10.jar:/Users/Max/.ivy2/cache/com.google.guava/guava/bundles/guava-19.0.jar:/Users/Max/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.4.jar:/Users/Max/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-3.0.1.jar:/Users/Max/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.33.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.6.jar:/Users/Max/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.6.jar:/Users/Max/.ivy2/cache/io.netty/netty-handler/jars/netty-handler-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-buffer/jars/netty-buffer-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-common/jars/netty-common-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-transport/jars/netty-transport-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-codec/jars/netty-codec-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-codec-http/jars/netty-codec-http-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.36.Final-linux-x86_64.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java-jpa_2.11/jars/play-java-jpa_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/Max/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.4.3.jar:/Users/Max/.ivy2/cache/com.googlecode.usc/jdbcdslog/jars/jdbcdslog-1.0.6.2.jar:/Users/Max/.ivy2/cache/com.h2database/h2/jars/h2-1.4.191.jar:/Users/Max/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/Max/.ivy2/cache/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/jars/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-entitymanager/jars/hibernate-entitymanager-4.3.7.Final.jar:/Users/Max/.ivy2/cache/org.jboss.logging/jboss-logging-annotations/jars/jboss-logging-annotations-1.2.0.Beta1.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-core/jars/hibernate-core-4.3.7.Final.jar:/Users/Max/.ivy2/cache/org.jboss.spec.javax.transaction/jboss-transaction-api_1.2_spec/jars/jboss-transaction-api_1.2_spec-1.0.0.Final.jar:/Users/Max/.ivy2/cache/dom4j/dom4j/jars/dom4j-1.6.1.jar:/Users/Max/.ivy2/cache/org.hibernate.common/hibernate-commons-annotations/jars/hibernate-commons-annotations-4.0.5.Final.jar:/Users/Max/.ivy2/cache/antlr/antlr/jars/antlr-2.7.7.jar:/Users/Max/.ivy2/cache/org.jboss/jandex/jars/jandex-1.1.0.Final.jar
+Scala compilation took 27.394151 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 37 s, completed Jun 13, 2016 10:06:51 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@2eace78, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@411c55cb, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -86,18 +133,18 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 1 s, completed 12-Jun-2016 15:44:53
+Total time: 1 s, completed Jun 13, 2016 10:06:52 AM
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/}root/compile:mainClass
+> {file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@82bd841, check cycles: false
-Total time: 0 s, completed 12-Jun-2016 15:44:54
+Running task... Cancel: sbt.server.ServerTaskCancellation@55793bb2, check cycles: false
+Total time: 0 s, completed Jun 13, 2016 10:06:53 AM
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/}root/compile:discoveredMainClasses
+> {file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@4414ab39, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@6ba942d6, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -114,36 +161,30 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 1 s, completed 12-Jun-2016 15:44:54
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@30259e62, check cycles: false
-Total time: 0 s, completed 12-Jun-2016 15:44:54
+Total time: 1 s, completed Jun 13, 2016 10:06:53 AM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > backgroundRun
 Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@63e6cab3, check cycles: false
-Total time: 0 s, completed 12-Jun-2016 15:45:24
+Running task... Cancel: sbt.server.ServerTaskCancellation@412805e, check cycles: false
+Total time: 1 s, completed Jun 13, 2016 10:06:56 AM
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/}root/*:playForkConfig
+> {file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@15cfa2fd, check cycles: false
-Total time: 1 s, completed 12-Jun-2016 15:45:30
+Running task... Cancel: sbt.server.ServerTaskCancellation@3706c257, check cycles: false
+Total time: 1 s, completed Jun 13, 2016 10:07:08 AM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@5d54c1a8, check cycles: false
-Total time: 0 s, completed 12-Jun-2016 15:45:33
+Running task... Cancel: sbt.server.ServerTaskCancellation@743feb50, check cycles: false
+Total time: 0 s, completed Jun 13, 2016 10:07:17 AM
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/}root/*:playForkReload
+> {file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@1a1461b6, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@28aa23ae, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -161,15 +202,460 @@ Sources indirectly invalidated by:
 All initially invalidated sources: Set()
 
 Copy resource mappings: 
-	(/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/conf/dummy.yaml,/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/dummy.yaml)
-	(/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/conf/logback.xml,/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/logback.xml)
-	(/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/conf/routes,/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/routes)
-	(/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/conf/import.sql,/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/import.sql)
-	(/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/conf/application.conf,/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/application.conf)
-	(/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/conf/META-INF,/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF)
-	(/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/conf/META-INF/persistence.xml,/home/vincent/Development/Repos/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF/persistence.xml)
-Read from stdout: CoffeeScript compiling on 1 source(s)
-CoffeeScript compiling on 1 source(s)
-Total time: 4 s, completed 12-Jun-2016 15:45:50
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/application.conf,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/application.conf)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/dummy.yaml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/dummy.yaml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/import.sql,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/import.sql)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/logback.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/logback.xml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/routes,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/routes)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF/persistence.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF/persistence.xml)
+Warning: node.js detection failed, sbt will use the Rhino based Trireme JavaScript engine instead to run JavaScript assets compilation, which in some cases may be orders of magnitude slower than using node.js.
+Total time: 3 s, completed Jun 13, 2016 10:07:26 AM
 > server-post-command-cleanup
 > server-handle-next-server-request
+> {file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@1ffb55dd, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes...
+Compiling 1 Scala source to /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 7d1406a7, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/classes:/Users/Max/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes:/Users/Max/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/Max/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/Max/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.18.2-GA.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/Max/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/Max/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.7.jar:/Users/Max/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.7.jar:/Users/Max/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.19.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.2.jar:/Users/Max/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.8.1.jar:/Users/Max/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.7.1.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.4.jar:/Users/Max/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.19.jar:/Users/Max/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.19.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-stream_2.11/jars/akka-stream_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.7.0.jar:/Users/Max/.ivy2/cache/com.typesafe/ssl-config-akka_2.11/bundles/ssl-config-akka_2.11-0.2.1.jar:/Users/Max/.ivy2/cache/com.typesafe/ssl-config-core_2.11/bundles/ssl-config-core_2.11-0.2.1.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/Max/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/Max/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/Max/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/Max/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/Max/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/Max/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/Max/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.16.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.2.4.Final.jar:/Users/Max/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/Max/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/Max/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.1.0.jar:/Users/Max/.ivy2/cache/javax.el/javax.el-api/jars/javax.el-api-3.0.0.jar:/Users/Max/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.10.jar:/Users/Max/.ivy2/cache/com.google.guava/guava/bundles/guava-19.0.jar:/Users/Max/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.4.jar:/Users/Max/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-3.0.1.jar:/Users/Max/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.33.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.6.jar:/Users/Max/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.6.jar:/Users/Max/.ivy2/cache/io.netty/netty-handler/jars/netty-handler-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-buffer/jars/netty-buffer-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-common/jars/netty-common-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-transport/jars/netty-transport-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-codec/jars/netty-codec-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-codec-http/jars/netty-codec-http-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.36.Final-linux-x86_64.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java-jpa_2.11/jars/play-java-jpa_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/Max/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.4.3.jar:/Users/Max/.ivy2/cache/com.googlecode.usc/jdbcdslog/jars/jdbcdslog-1.0.6.2.jar:/Users/Max/.ivy2/cache/com.h2database/h2/jars/h2-1.4.191.jar:/Users/Max/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/Max/.ivy2/cache/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/jars/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-entitymanager/jars/hibernate-entitymanager-4.3.7.Final.jar:/Users/Max/.ivy2/cache/org.jboss.logging/jboss-logging-annotations/jars/jboss-logging-annotations-1.2.0.Beta1.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-core/jars/hibernate-core-4.3.7.Final.jar:/Users/Max/.ivy2/cache/org.jboss.spec.javax.transaction/jboss-transaction-api_1.2_spec/jars/jboss-transaction-api_1.2_spec-1.0.0.Final.jar:/Users/Max/.ivy2/cache/dom4j/dom4j/jars/dom4j-1.6.1.jar:/Users/Max/.ivy2/cache/org.hibernate.common/hibernate-commons-annotations/jars/hibernate-commons-annotations-4.0.5.Final.jar:/Users/Max/.ivy2/cache/antlr/antlr/jars/antlr-2.7.7.jar:/Users/Max/.ivy2/cache/org.jboss/jandex/jars/jandex-1.1.0.Final.jar
+Scala compilation took 2.513164577 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/application.conf,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/application.conf)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/dummy.yaml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/dummy.yaml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/import.sql,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/import.sql)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/logback.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/logback.xml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/routes,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/routes)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF/persistence.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF/persistence.xml)
+Total time: 4 s, completed Jun 13, 2016 10:13:14 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@3e875cf9, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed Jun 13, 2016 10:13:34 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 1
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@b757eb9, check cycles: false
+Total time: 0 s, completed Jun 13, 2016 10:13:37 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@237f1fc1, check cycles: false
+Total time: 0 s, completed Jun 13, 2016 10:13:53 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@e33037c, check cycles: false
+Total time: 0 s, completed Jun 13, 2016 10:13:58 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@16ed488, check cycles: false
+Total time: 0 s, completed Jun 13, 2016 10:14:01 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@828f7f9, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/application.conf,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/application.conf)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/dummy.yaml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/dummy.yaml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/import.sql,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/import.sql)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/logback.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/logback.xml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/routes,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/routes)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF/persistence.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF/persistence.xml)
+Total time: 2 s, completed Jun 13, 2016 10:14:06 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@442f281c, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes...
+Compiling 1 Scala source to /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 5ee19ea7, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/classes:/Users/Max/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes:/Users/Max/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/Max/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/Max/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.18.2-GA.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/Max/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/Max/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.7.jar:/Users/Max/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.7.jar:/Users/Max/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.19.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.2.jar:/Users/Max/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.8.1.jar:/Users/Max/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.7.1.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.4.jar:/Users/Max/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.19.jar:/Users/Max/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.19.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-stream_2.11/jars/akka-stream_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.7.0.jar:/Users/Max/.ivy2/cache/com.typesafe/ssl-config-akka_2.11/bundles/ssl-config-akka_2.11-0.2.1.jar:/Users/Max/.ivy2/cache/com.typesafe/ssl-config-core_2.11/bundles/ssl-config-core_2.11-0.2.1.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/Max/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/Max/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/Max/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/Max/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/Max/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/Max/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/Max/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.16.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.2.4.Final.jar:/Users/Max/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/Max/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/Max/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.1.0.jar:/Users/Max/.ivy2/cache/javax.el/javax.el-api/jars/javax.el-api-3.0.0.jar:/Users/Max/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.10.jar:/Users/Max/.ivy2/cache/com.google.guava/guava/bundles/guava-19.0.jar:/Users/Max/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.4.jar:/Users/Max/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-3.0.1.jar:/Users/Max/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.33.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.6.jar:/Users/Max/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.6.jar:/Users/Max/.ivy2/cache/io.netty/netty-handler/jars/netty-handler-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-buffer/jars/netty-buffer-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-common/jars/netty-common-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-transport/jars/netty-transport-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-codec/jars/netty-codec-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-codec-http/jars/netty-codec-http-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.36.Final-linux-x86_64.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java-jpa_2.11/jars/play-java-jpa_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/Max/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.4.3.jar:/Users/Max/.ivy2/cache/com.googlecode.usc/jdbcdslog/jars/jdbcdslog-1.0.6.2.jar:/Users/Max/.ivy2/cache/com.h2database/h2/jars/h2-1.4.191.jar:/Users/Max/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/Max/.ivy2/cache/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/jars/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-entitymanager/jars/hibernate-entitymanager-4.3.7.Final.jar:/Users/Max/.ivy2/cache/org.jboss.logging/jboss-logging-annotations/jars/jboss-logging-annotations-1.2.0.Beta1.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-core/jars/hibernate-core-4.3.7.Final.jar:/Users/Max/.ivy2/cache/org.jboss.spec.javax.transaction/jboss-transaction-api_1.2_spec/jars/jboss-transaction-api_1.2_spec-1.0.0.Final.jar:/Users/Max/.ivy2/cache/dom4j/dom4j/jars/dom4j-1.6.1.jar:/Users/Max/.ivy2/cache/org.hibernate.common/hibernate-commons-annotations/jars/hibernate-commons-annotations-4.0.5.Final.jar:/Users/Max/.ivy2/cache/antlr/antlr/jars/antlr-2.7.7.jar:/Users/Max/.ivy2/cache/org.jboss/jandex/jars/jandex-1.1.0.Final.jar
+Scala compilation took 2.06828812 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 3 s, completed Jun 13, 2016 10:16:36 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@6454d151, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/application.conf,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/application.conf)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/dummy.yaml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/dummy.yaml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/import.sql,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/import.sql)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/logback.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/logback.xml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/routes,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/routes)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF/persistence.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF/persistence.xml)
+Total time: 2 s, completed Jun 13, 2016 10:16:42 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@161b6483, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes...
+Compiling 1 Scala source to /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 685f8697, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/classes:/Users/Max/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes:/Users/Max/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/Max/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/Max/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.18.2-GA.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/Max/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/Max/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.7.jar:/Users/Max/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.7.jar:/Users/Max/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.19.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.2.jar:/Users/Max/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.8.1.jar:/Users/Max/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.7.1.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.4.jar:/Users/Max/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.19.jar:/Users/Max/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.19.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-stream_2.11/jars/akka-stream_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.7.0.jar:/Users/Max/.ivy2/cache/com.typesafe/ssl-config-akka_2.11/bundles/ssl-config-akka_2.11-0.2.1.jar:/Users/Max/.ivy2/cache/com.typesafe/ssl-config-core_2.11/bundles/ssl-config-core_2.11-0.2.1.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/Max/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/Max/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/Max/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/Max/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/Max/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/Max/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/Max/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.16.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.2.4.Final.jar:/Users/Max/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/Max/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/Max/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.1.0.jar:/Users/Max/.ivy2/cache/javax.el/javax.el-api/jars/javax.el-api-3.0.0.jar:/Users/Max/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.10.jar:/Users/Max/.ivy2/cache/com.google.guava/guava/bundles/guava-19.0.jar:/Users/Max/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.4.jar:/Users/Max/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-3.0.1.jar:/Users/Max/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.33.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.6.jar:/Users/Max/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.6.jar:/Users/Max/.ivy2/cache/io.netty/netty-handler/jars/netty-handler-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-buffer/jars/netty-buffer-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-common/jars/netty-common-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-transport/jars/netty-transport-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-codec/jars/netty-codec-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-codec-http/jars/netty-codec-http-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.36.Final-linux-x86_64.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java-jpa_2.11/jars/play-java-jpa_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/Max/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.4.3.jar:/Users/Max/.ivy2/cache/com.googlecode.usc/jdbcdslog/jars/jdbcdslog-1.0.6.2.jar:/Users/Max/.ivy2/cache/com.h2database/h2/jars/h2-1.4.191.jar:/Users/Max/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/Max/.ivy2/cache/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/jars/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-entitymanager/jars/hibernate-entitymanager-4.3.7.Final.jar:/Users/Max/.ivy2/cache/org.jboss.logging/jboss-logging-annotations/jars/jboss-logging-annotations-1.2.0.Beta1.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-core/jars/hibernate-core-4.3.7.Final.jar:/Users/Max/.ivy2/cache/org.jboss.spec.javax.transaction/jboss-transaction-api_1.2_spec/jars/jboss-transaction-api_1.2_spec-1.0.0.Final.jar:/Users/Max/.ivy2/cache/dom4j/dom4j/jars/dom4j-1.6.1.jar:/Users/Max/.ivy2/cache/org.hibernate.common/hibernate-commons-annotations/jars/hibernate-commons-annotations-4.0.5.Final.jar:/Users/Max/.ivy2/cache/antlr/antlr/jars/antlr-2.7.7.jar:/Users/Max/.ivy2/cache/org.jboss/jandex/jars/jandex-1.1.0.Final.jar
+Scala compilation took 1.470307816 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 3 s, completed Jun 13, 2016 10:17:48 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@6a3d4846, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/application.conf,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/application.conf)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/dummy.yaml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/dummy.yaml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/import.sql,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/import.sql)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/logback.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/logback.xml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/routes,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/routes)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF/persistence.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF/persistence.xml)
+Total time: 1 s, completed Jun 13, 2016 10:17:51 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@442564f1, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes...
+Compiling 1 Scala source to /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 11a3666, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/classes:/Users/Max/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes:/Users/Max/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/Max/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/Max/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.18.2-GA.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/Max/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/Max/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.7.jar:/Users/Max/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.7.jar:/Users/Max/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.19.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.2.jar:/Users/Max/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.8.1.jar:/Users/Max/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.7.1.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.4.jar:/Users/Max/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.19.jar:/Users/Max/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.19.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-stream_2.11/jars/akka-stream_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.7.0.jar:/Users/Max/.ivy2/cache/com.typesafe/ssl-config-akka_2.11/bundles/ssl-config-akka_2.11-0.2.1.jar:/Users/Max/.ivy2/cache/com.typesafe/ssl-config-core_2.11/bundles/ssl-config-core_2.11-0.2.1.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/Max/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/Max/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/Max/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/Max/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/Max/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/Max/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/Max/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.16.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.2.4.Final.jar:/Users/Max/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/Max/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/Max/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.1.0.jar:/Users/Max/.ivy2/cache/javax.el/javax.el-api/jars/javax.el-api-3.0.0.jar:/Users/Max/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.10.jar:/Users/Max/.ivy2/cache/com.google.guava/guava/bundles/guava-19.0.jar:/Users/Max/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.4.jar:/Users/Max/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-3.0.1.jar:/Users/Max/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.33.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.6.jar:/Users/Max/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.6.jar:/Users/Max/.ivy2/cache/io.netty/netty-handler/jars/netty-handler-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-buffer/jars/netty-buffer-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-common/jars/netty-common-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-transport/jars/netty-transport-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-codec/jars/netty-codec-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-codec-http/jars/netty-codec-http-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.36.Final-linux-x86_64.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java-jpa_2.11/jars/play-java-jpa_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/Max/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.4.3.jar:/Users/Max/.ivy2/cache/com.googlecode.usc/jdbcdslog/jars/jdbcdslog-1.0.6.2.jar:/Users/Max/.ivy2/cache/com.h2database/h2/jars/h2-1.4.191.jar:/Users/Max/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/Max/.ivy2/cache/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/jars/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-entitymanager/jars/hibernate-entitymanager-4.3.7.Final.jar:/Users/Max/.ivy2/cache/org.jboss.logging/jboss-logging-annotations/jars/jboss-logging-annotations-1.2.0.Beta1.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-core/jars/hibernate-core-4.3.7.Final.jar:/Users/Max/.ivy2/cache/org.jboss.spec.javax.transaction/jboss-transaction-api_1.2_spec/jars/jboss-transaction-api_1.2_spec-1.0.0.Final.jar:/Users/Max/.ivy2/cache/dom4j/dom4j/jars/dom4j-1.6.1.jar:/Users/Max/.ivy2/cache/org.hibernate.common/hibernate-commons-annotations/jars/hibernate-commons-annotations-4.0.5.Final.jar:/Users/Max/.ivy2/cache/antlr/antlr/jars/antlr-2.7.7.jar:/Users/Max/.ivy2/cache/org.jboss/jandex/jars/jandex-1.1.0.Final.jar
+Scala compilation took 1.355040525 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 2 s, completed Jun 13, 2016 10:19:25 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@7a19af97, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/application.conf,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/application.conf)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/dummy.yaml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/dummy.yaml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/import.sql,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/import.sql)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/logback.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/logback.xml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/routes,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/routes)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF/persistence.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF/persistence.xml)
+Total time: 2 s, completed Jun 13, 2016 10:19:30 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@7ae21f5, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes...
+Compiling 1 Scala source to /Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 346515d5, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/classes:/Users/Max/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes:/Users/Max/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar:/Users/Max/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.1.0.jar:/Users/Max/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.18.2-GA.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/Max/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar:/Users/Max/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.7.jar:/Users/Max/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.7.jar:/Users/Max/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.19.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.2.jar:/Users/Max/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.8.1.jar:/Users/Max/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.7.1.jar:/Users/Max/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.7.1.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.4.jar:/Users/Max/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.19.jar:/Users/Max/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.19.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-stream_2.11/jars/akka-stream_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.7.0.jar:/Users/Max/.ivy2/cache/com.typesafe/ssl-config-akka_2.11/bundles/ssl-config-akka_2.11-0.2.1.jar:/Users/Max/.ivy2/cache/com.typesafe/ssl-config-core_2.11/bundles/ssl-config-core_2.11-0.2.1.jar:/Users/Max/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/Max/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.4.4.jar:/Users/Max/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/Max/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/Max/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/Max/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/Max/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar:/Users/Max/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/Max/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/Max/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.16.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.2.4.Final.jar:/Users/Max/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/Max/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar:/Users/Max/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.1.0.jar:/Users/Max/.ivy2/cache/javax.el/javax.el-api/jars/javax.el-api-3.0.0.jar:/Users/Max/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.2.4.RELEASE.jar:/Users/Max/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.10.jar:/Users/Max/.ivy2/cache/com.google.guava/guava/bundles/guava-19.0.jar:/Users/Max/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.4.jar:/Users/Max/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-3.0.1.jar:/Users/Max/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.33.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.6.jar:/Users/Max/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.6.jar:/Users/Max/.ivy2/cache/io.netty/netty-handler/jars/netty-handler-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-buffer/jars/netty-buffer-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-common/jars/netty-common-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-transport/jars/netty-transport-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-codec/jars/netty-codec-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-codec-http/jars/netty-codec-http-4.0.36.Final.jar:/Users/Max/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.36.Final-linux-x86_64.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java-jpa_2.11/jars/play-java-jpa_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.4.jar:/Users/Max/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/Max/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.4.3.jar:/Users/Max/.ivy2/cache/com.googlecode.usc/jdbcdslog/jars/jdbcdslog-1.0.6.2.jar:/Users/Max/.ivy2/cache/com.h2database/h2/jars/h2-1.4.191.jar:/Users/Max/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/Max/.ivy2/cache/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/jars/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-entitymanager/jars/hibernate-entitymanager-4.3.7.Final.jar:/Users/Max/.ivy2/cache/org.jboss.logging/jboss-logging-annotations/jars/jboss-logging-annotations-1.2.0.Beta1.jar:/Users/Max/.ivy2/cache/org.hibernate/hibernate-core/jars/hibernate-core-4.3.7.Final.jar:/Users/Max/.ivy2/cache/org.jboss.spec.javax.transaction/jboss-transaction-api_1.2_spec/jars/jboss-transaction-api_1.2_spec-1.0.0.Final.jar:/Users/Max/.ivy2/cache/dom4j/dom4j/jars/dom4j-1.6.1.jar:/Users/Max/.ivy2/cache/org.hibernate.common/hibernate-commons-annotations/jars/hibernate-commons-annotations-4.0.5.Final.jar:/Users/Max/.ivy2/cache/antlr/antlr/jars/antlr-2.7.7.jar:/Users/Max/.ivy2/cache/org.jboss/jandex/jars/jandex-1.1.0.Final.jar
+Scala compilation took 1.51665723 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 2 s, completed Jun 13, 2016 10:20:48 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@6b621567, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/application.conf,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/application.conf)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/dummy.yaml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/dummy.yaml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/import.sql,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/import.sql)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/logback.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/logback.xml)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/routes,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/routes)
+	(/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/conf/META-INF/persistence.xml,/Users/Max/NetBeansProjects/pok-dexEE/Pokemon_Play/target/scala-2.11/classes/META-INF/persistence.xml)
+Total time: 1 s, completed Jun 13, 2016 10:20:51 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+Done executing sbt server engine, result Right(Exit(0))
+Closing listening server socket
+Waiting for socket thread
+Waiting for request processor thread
+Waiting for command engine result
+Returning control to sbt launcher with result Exit(0)
+Closing the 1140@lwap-conf-bladelin-1.defaultdomain logs at Mon Jun 13 10:28:58 CEST 2016, goodbye.

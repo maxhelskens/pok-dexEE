@@ -96,11 +96,17 @@
     <br/>
     <br/>
     <c:if test="${!empty selectedPokemon.evolvesTo}">
-        <a href="pokemon?${selectedPokemon.evolvesTo}" class="pokemonlink bubble"> 
-            <text>Evolves to: </text>
-            <img src="${initParam.pokemonImagePath}${selectedPokemon.evolvesTo}.png" class="thumbnail">
-        </a>
+        <div class="typeBox">
+            <text class="pokemonlink bubble">Evolves to: </text>
+            <c:forEach var="nextPokémon" items="${selectedPokemon.evolvesTo}">
+                <a href="pokemon?${nextPokémon.id}" class="pokemonlink bubble"> 
+                    <img src="${initParam.pokemonImagePath}${nextPokémon.id}.png" class="thumbnail">
+                </a>
+            </c:forEach>
+        </div>
     </c:if>
+    <br/>
+    <br/>
     <br/>
     <br/>
     <text id="cryLink"><strong>Cry: </strong></text>

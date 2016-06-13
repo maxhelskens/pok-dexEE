@@ -115,9 +115,11 @@ public class REST_Client extends javax.swing.JFrame {
     private final int DESIRED_WIDTH = 300;
     private BufferedImage resized;
 
-    public REST_Client(String id) {
+    public REST_Client(String id, String request) {
 
-        initUI(id);
+        if (request.equals("puzzle")){
+            initUI(id);
+        }
     }
 
     private void initUI(String id) {
@@ -419,26 +421,26 @@ public class REST_Client extends javax.swing.JFrame {
         final JFrame parent = new JFrame();
         
         JLabel text = new JLabel("Pokemon id: ");
-        text.setBounds(50,70,150,20);
+        text.setBounds(50,50,150,20);
         
         JTextField tf;
         tf=new JTextField();  
-        tf.setBounds(50,100,200,20);
+        tf.setBounds(50,80,200,20);
         
         JButton button = new JButton();
         button.setText("Show Pokémon Puzzle");
-        button.setBounds(50,150,200,30);
+        button.setBounds(50,130,200,30);
         
         JButton button2 = new JButton();
         button2.setText("Show Pokémon info");
-        button2.setBounds(50,190,200,30);
+        button2.setBounds(50,170,200,30);
         
         parent.add(text);
         parent.add(tf);
         parent.add(button);
         parent.add(button2);
         
-        parent.setSize(300,300); 
+        parent.setSize(300,250); 
         parent.setTitle("Pokéapi Client");
         parent.setLayout(null);  
         parent.setVisible(true);
@@ -453,7 +455,7 @@ public class REST_Client extends javax.swing.JFrame {
 
                     @Override
                     public void run() {
-                        REST_Client puzzle = new REST_Client(id);
+                        REST_Client puzzle = new REST_Client(id, "puzzle");
                         puzzle.setVisible(true);
                     }
                 });
@@ -469,7 +471,7 @@ public class REST_Client extends javax.swing.JFrame {
 
                     @Override
                     public void run() {
-                        REST_Client puzzle = new REST_Client(id);
+                        REST_Client puzzle = new REST_Client(id, "info");
                         try {
                             puzzle.sendGet(id);
                         } catch (Exception ex) {

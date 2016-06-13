@@ -1,12 +1,14 @@
 @(pokemon : List[Pokemon])
 
 @main("Welcome to Play") {
+    <div id="typePage" style="height: 520px">
     @for(poke <- pokemon){
-        <div class="row">
+        <div style="height: 200; width: 100%; float: left;">
             <a href="/pokemon/@poke.getId()">
                 <img src="@(routes.Assets.at("img/pokemon/" + poke.getId()) + ".png")"/>
                 <p>@poke.getName()</p>
             </a>
         </div>
     }
+    </div>
 }
