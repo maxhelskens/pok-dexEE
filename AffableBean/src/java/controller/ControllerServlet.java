@@ -136,7 +136,7 @@ public class ControllerServlet extends HttpServlet {
             
         // if cart page is requested
         } else if (userPath.equals("/viewCart")) {
-
+            request.setAttribute("pokemonlist", pokedexBean.getItems());
             String clear = request.getParameter("clear");
 
             if ((clear != null) && clear.equals("true")) {
@@ -163,7 +163,7 @@ public class ControllerServlet extends HttpServlet {
             request.setAttribute("group", pokeGroup);
         }
         
-        request.setAttribute("pokemonlist", pokedexBean.getItems());
+        request.setAttribute("nrofpokemon", pokedexBean.getNumberOfItems());
         
         String url;
         // use RequestDispatcher to forward request internally
@@ -205,9 +205,8 @@ public class ControllerServlet extends HttpServlet {
                 Pokemon pokemon = pokemonFacade.find(Integer.parseInt(pokemonId));
                 pokedexBean.add(pokemon);
             }
-
-            request.setAttribute("nrofpokemon", pokedexBean.getNumberOfItems());
-            request.setAttribute("caughtpokemon", pokedexBean.getItems());
+            
+            session.setAttribute("caughtpokemon", pokedexBean.getItems());
             
             response.sendRedirect("viewCart");
         // if updateCart action is called
@@ -220,8 +219,7 @@ public class ControllerServlet extends HttpServlet {
             Pokemon pokemon = pokemonFacade.find(Integer.parseInt(pokemonId));
             pokedexBean.update(pokemon, Short.parseShort(quantity));
             
-            request.setAttribute("nrofpokemon", pokedexBean.getNumberOfItems());
-            request.setAttribute("caughtpokemon", pokedexBean.getItems());
+            session.setAttribute("caughtpokemon", pokedexBean.getItems());
 
             response.sendRedirect("viewCart");
         }
