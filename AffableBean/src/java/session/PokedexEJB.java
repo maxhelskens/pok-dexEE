@@ -2,11 +2,12 @@ package session;
 
 import cart.PokeBall;
 import entity.Pokemon;
+import interceptor.CatchLogger;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
-import javax.ejb.EJB;
 import javax.ejb.Stateful;
+import javax.interceptor.Interceptors;
 
 /**
  *
@@ -26,6 +27,7 @@ public class PokedexEJB {
      * @param pokemon the Pokemon
      * @see PokeBall
      */
+    @Interceptors(CatchLogger.class)
     public void add(Pokemon pokemon) {
         boolean newPokemon = true;
 
@@ -51,6 +53,7 @@ public class PokedexEJB {
      * @param quantity the number of Pokemon of this species
      * @see PokeBall
      */
+    @Interceptors(CatchLogger.class)
     public void update(Pokemon pokemon, short quantity) {
         //short qty = -1;
 
