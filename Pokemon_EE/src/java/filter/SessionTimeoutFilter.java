@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Max
  */
-@WebFilter(servletNames = {"Controller"})
+@WebFilter(servletNames = {"ControllerServlet"})
 public class SessionTimeoutFilter implements Filter {
     
     @Override
@@ -29,7 +29,7 @@ public class SessionTimeoutFilter implements Filter {
         // if session doesn't exist, forward user to welcome page
         if (session == null) {
             try {
-                req.getRequestDispatcher("/index.jsp").forward(request, response);
+                req.getRequestDispatcher("randomPokemon").forward(request, response);
             } catch (ServletException | IOException ex) {
                 ex.printStackTrace();
             }
