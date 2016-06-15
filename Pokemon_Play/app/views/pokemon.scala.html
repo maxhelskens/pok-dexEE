@@ -1,7 +1,11 @@
 @(selectedPokemon : Pokemon)
 
-@main("Wie is deze Pokemon?") {
-
+@main(selectedPokemon.getName()) {
+    <div>
+        <a href="/pokemon/@selectedPokemon.getId()/edit">
+            Edit
+        </a>
+    </div>
     <div class="pokemonHeader">
         <div id="pokemonLeftHeader">
             @if(selectedPokemon.getId() > 1){
@@ -216,13 +220,4 @@
             .attr('value', chance);
     </script>
 </div>
-
-<div>
-    <a href="/pokemon/@selectedPokemon.getId()/edit">
-        Edit
-        
-    </a>
-    
-</div>
-
 }

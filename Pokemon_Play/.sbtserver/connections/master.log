@@ -1,76 +1,34 @@
-New log file opened at Mon Jun 13 10:05:33 CEST 2016 by 1140@lwap-conf-bladelin-1.defaultdomain
-Taking next connection to: 49351
-New client attempting to connect on port: 49353-49351
-  Address = /192.168.1.5:49351
-This client on port 49353 has uuid 7eab4a43-43f1-401b-98e9-81cb60a07486 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-7eab4a43-43f1-401b-98e9-81cb60a07486
-Taking next connection to: 49351
-New client attempting to connect on port: 49378-49351
-  Address = /192.168.1.5:49351
-Handshake exception on socket: 49378
+New log file opened at Wed Jun 15 19:07:49 CEST 2016 by 2687@VinnniesLaptop
+Taking next connection to: 35546
+New client attempting to connect on port: 41750-35546
+  Address = /127.0.1.1:35546
+This client on port 41750 has uuid e78e8e2b-de75-42f9-a2c2-dfda19349152 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-e78e8e2b-de75-42f9-a2c2-dfda19349152
+Taking next connection to: 35546
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 35546
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 35546
+New client attempting to connect on port: 42008-35546
+  Address = /127.0.1.1:35546
+Handshake exception on socket: 42008
 sbt.impl.ipc.HandshakeException: Unable to perform handshake
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
 	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
 	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.net.SocketException: Connection reset
-	at java.net.SocketInputStream.read(SocketInputStream.java:189)
-	at java.net.SocketInputStream.read(SocketInputStream.java:121)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
-	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
 	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
 	... 2 more
-Taking next connection to: 49351
-New client attempting to connect on port: 49379-49351
-  Address = /192.168.1.5:49351
-This client on port 49379 has uuid 026d078c-f0de-45a9-80c2-a8696a9c9a2b configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-7eab4a43-43f1-401b-98e9-81cb60a07486, play-fork-run-026d078c-f0de-45a9-80c2-a8696a9c9a2b
-Taking next connection to: 49351
+Taking next connection to: 35546
+New client attempting to connect on port: 42010-35546
+  Address = /127.0.1.1:35546
+This client on port 42010 has uuid b59bbb15-83f4-49a8-9ce2-c172b764d8a0 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-e78e8e2b-de75-42f9-a2c2-dfda19349152, play-fork-run-b59bbb15-83f4-49a8-9ce2-c172b764d8a0
+Taking next connection to: 35546
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 49351
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 49351
-New client attempting to connect on port: 49490-49351
-  Address = /192.168.1.5:49351
-Handshake exception on socket: 49490
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.net.SocketException: Connection reset
-	at java.net.SocketInputStream.read(SocketInputStream.java:189)
-	at java.net.SocketInputStream.read(SocketInputStream.java:121)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
-	at java.io.DataInputStream.readInt(DataInputStream.java:387)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 49351
-New client attempting to connect on port: 49491-49351
-  Address = /192.168.1.5:49351
-This client on port 49491 has uuid 0f573d00-e057-48c4-98bf-a6de9bdef7a2 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-7eab4a43-43f1-401b-98e9-81cb60a07486, play-fork-run-0f573d00-e057-48c4-98bf-a6de9bdef7a2
-Taking next connection to: 49351
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 49351
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 49351
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 49351
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 49351
-Checking to see if clients are empty...
-No non-daemon clients connected after 3 min. Shutting down.
-1 daemon clients are connected.
-Server socket thread exiting.
-1 clients open, will close them...
-All client sockets have been closed.
-Closing the 1140@lwap-conf-bladelin-1.defaultdomain logs at Mon Jun 13 10:28:58 CEST 2016, goodbye.
+Taking next connection to: 35546

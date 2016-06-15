@@ -62,9 +62,6 @@ public class Application extends Controller {
        
         if(pokeForm.hasErrors()){
             System.out.println("Errors");
-            
-            
-            
             return badRequest(pokemon_edit.render(pokeForm, typeOptions));
         }
         else{
