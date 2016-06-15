@@ -103,7 +103,14 @@
     </p>
     
     <h3>I18N and L10N</h3>
-    <p>...</p>
+    <p>Each language is defined in a seperate text file containing key value pairs. (Same format as ResourceBundles in JSP).</p>
+    <p>Using it in the templates is really simple:</p>
+    <pre>
+        <code>
+            &lt;span&gt;@Messages("viewall")&lt;/span&gt;
+        </code>
+    </pre>
+    <p>This is much shorter and clearer than the JSTL equivalent.</p>    
     
     <h3>JavaScript integration</h3>
     <p>
