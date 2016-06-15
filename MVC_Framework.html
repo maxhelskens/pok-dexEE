@@ -20,43 +20,61 @@
         </ul>
     </div>
     
-    <h1>Play Framework</h1>
+    <h1>Play Framework (2.5)</h1>
     <h2>Short description</h2>
-    <p></p>
+    <p>
+        Play was first released in 2007. It is built on Scala (and some Java). It aims at developer friendlyness and high scalability.
+        Can be used with Java or Scala as programming language.
+    </p>
     
     <h2>Technical features</h2>
     <h3>MVC solution</h3>
-    <ul>
-        <li>
-    </ul>
     
     <p>
         The model layer is not strictly defined by Play. It can be an ordinary Java class, a JPA entity...
     </p>
     
     <p>
-        For the controller layer Play provides a Controller superclass which much be inherited.
-        A controller consists of different Actions ()
+        For the controller layer Play provides a Controller superclass which must be inherited.
+        A controller consists of different Actions (methods) which are mapped to URLs via a seperate 'routes' configuration file.
     </p>
     
     <p>
+        The view layer consists of a proprietary templating engine using Scala.
+    </p>
     
+    <p>
+        The project structure is very transparant with adjecent /models, /views and /controllers directories.
     </p>
     
     <h3>Navigation</h3>
-    <p>...</p>
+    <p>
+        URLs are mapped to Actions (controller methods) using a seperate config file. URL parameters can be specified and mapped to become input arguments of the Action method.
+        This is clear for small applications, but may become cumbersome for large projects because each Action must be explicitly listed.
+    </p>
+    
+    <p>
+        Templates can refer to a "logical" name - a combination of the controller name and method - 
+        which is replaced by the real URL after rendering.
+    </p>
     
     <h3>Form handling</h3>
     <p>
-        A FormFactory creates a Form object with a binding to a model class.
-        
-        Html form parameters are automatically set 
-        
-                
-    [Annotation tags.]
+        Play uses a FormFactory to create a Form object with a binding to a model class.
+        The Form object can construct the model, store vallidation errors and fill itself with values from an existing model.
+        HTML form parameters are automatically binded when submitting.
+    </p>    
     
-    
+    <p>
+        The templating engine includes a helper library to generate the correct HTML markup for the form and input tags.
     </p>
+    
+    <p>
+        By default the Form object cannot deal with OneToMany / ManyToMany relations. Those fields in the model/entity will generate generic errors when submitting the form. 
+        The developer must provide its own 'Data binder' to map the form input (for instance a group of checkboxes) to the correct entity and vice versa.
+        While not too difficult, it is cumbersome. 
+    </p>
+    
     <h3>Validation</h3>
     <p>
         Entity classes can be annotated with JSR-303 (Bean Validation) annotation or Play's own Constraints annotations.
@@ -67,7 +85,7 @@
     <p>...</p>
     
     <h3>Server-side handling of user interface events</h3>
-    <p>...</p>
+    <p>Not suported</p>
     
     <h3>Rendering</h3>
     <p>
@@ -98,8 +116,26 @@
     <p>    
         Twirl is not so strict with delimiters. The @ sign indicates the start of an expression but there is no need to specify an end delimiter.
         The engine can determine this automagicaly.
-        
-    <!--This results in less overhead in delimiter tags, but may harm readability since.-->
+    </p>
+    
+    <p>
+        Twirl is interesting in that its templates are called like functions from the controller and can accept arguments.
+    </p>
+    
+    <pre>
+        <code>
+            @(title: String)
+            
+            &lt;!DOCTYPE html&gt;
+
+            &lt;html&gt;
+            ...
+        </code>
+    </pre>
+    
+    <p>
+        This allows for more decoupling since the variable name can change without modyfing the call to the template.
+        It is also more clear which variables are used by each template.
     </p>
     
     <h3>I18N and L10N</h3>
@@ -115,12 +151,9 @@
     <h3>JavaScript integration</h3>
     <p>
         A JavaScript router can be generated. This is used to generate URLs in JavaScript code (for instance: A JQuery Ajax Request).
-        
+    
+        This is a nice alternative to hard coding URLs in the JavaScript files.
     </p>
-    
-    <h3> ...</h3>
-    
-    
     
     <h2>Documentation</h2>
     <h3>Kind of documentation, quality, up-todate</h3>
@@ -128,26 +161,58 @@
         Official documentation consists of a series of written pages explaining each concept of the framework.
         The documentation is split into a part for Java developers and Scala developers.
         They both deal with the same subjects but differ in the language (Java or Scala) of the examples.
-        
-        The documentation and API are sometimes lacking in verbosity leaving the developer to find out certain details. (For instance: a )
-        
+    </p>
+    
+    <p>    
+        The documentation and API are often lacking in verbosity leaving the developer to find out certain details. (For instance simple things like: where should I create this file).
+    <p>
         Some features (certain form related template tags) are only mentioned in the API and not in the documentation.
+        For generating forms only the inputText tag is mentioned. To create checkboxes, radio buttons and select boxes there exist tags, but they are only found after carefully looking at the API.
     </p>
     
     <p>
-        While the written documentation is up to date, some other parts are not. 
+        While the written documentation is up to date, some other parts are not.
         Most notably: the introduction video on the main site uses an outdated version of the framework.
-        Many other examples from other sources also use older versions.
     </p>
+    
+    <p>
+        Many other examples from other sources also use older versions. This is annoying since major changes have occured between seemingly small updates.
+        (For instance the 2.5, 2.4 series are not backward compatible as you would expect.). Also: Searching on Google often returns pages from older versions of the documenation, leading developers astray.
+    </p>
+    
     <h3>Community activity</h3>
-    <p>...</p>
+    <p>
+        Play has an active mailinglist, and much animo on their Github repository (activity in Bug tracker, Pull requests etc). 
+    </p>
+    
+    <p>
+        Though they claim to have over 10.000 questions on StackOverflow the reality is that most of these have none or few answers.
+    </p>
+    
+    <p>
+        Some controversy aparently exists on the switch from the 1.x series to 2.x series which gravely broke backwards compatibility. 
+        (<a href="http://www.elidedbranches.com/2012/03/why-im-moving-away-from-play-framework.html">http://www.elidedbranches.com/2012/03/why-im-moving-away-from-play-framework.html</a>)
+        Several developers moved on or continued using the 1.x series.
+    </p>
     
     <h2>Future evolution</h2>
-    <p>...</p>
+    
+    <p>The Play Github repository shows almost daily contributions and version 2.5.4 was released just recently.</p>
+    
+    <p>A roadmap exists for versions 2.6 and 3.0 focussing more on small improvements and fixes.</p>
+    
+    <p>Conclusion: the project is still active. But no game changing features are planned at this moment.</p>
+    
     <h2>Your perception</h2>
-        <p>...</p>
+        <p>The framework is straightforward and a joy to use for simple projects, when moving to advanced topics it becomes increasingly difficult.</p>
+        <p>If you stay within the basic set of features offered it will provide very low development work and time.</p>
+        
         <h3>Ease of use</h3>
-        <p>...</p>
+        <p>
+            The framework is very easy to use, with minimal boiler plate code and clear syntax. 
+            Its features are not that advanced but avoid a too high level of abstraction.
+        </p>
+        
         <h3>Ease of installation</h3>
         <p>
             Play uses a custom IDE and server running in a web browser. Installation exists of downloading a zip file and running a bash script to run this service.
@@ -168,15 +233,10 @@
         </p>
             
         <p>
-            
+            It gets difficult though when moving on to slightly more advanced features. This is because many tutorials and examples are outdated. (See part about Documentation)
         </p>
         
-        <p>
-            The provided editor lists many quick start projects to start from.
-            This is 
-            
-            
-        </p>
+        <p>Beginners may see learning the basics of Scala language as an obstacle. Though in practice only very simple constructs are needed.</p>
         
     <h2>Practical information</h2>
     
