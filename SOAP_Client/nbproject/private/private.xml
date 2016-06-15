@@ -2,12 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/vincent/Development/Repos/pok-dexEE/SOAP_Client/src/UI/SOAP_Client_UI.java</file>
-            <file>file:/home/vincent/Development/Repos/pok-dexEE/SOAP_Client/src/META-INF/wsdl/localhost_8080/AffableBean/pokemonInformationService.wsdl</file>
-            <file>file:/home/vincent/Development/Repos/pok-dexEE/SOAP_Client/src/META-INF/wsdl/localhost_8080/AffableBean/pokemonInformationService.xsd_1.xsd</file>
-            <file>file:/home/vincent/Development/Repos/pok-dexEE/SOAP_Client/src/META-INF/jax-ws-catalog.xml</file>
-            <file>file:/home/vincent/Development/Repos/pok-dexEE/SOAP_Client/build/generated-sources/jax-ws/soapservice/PokemonInformationService.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
