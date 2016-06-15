@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0108)https://cygnus.cc.kuleuven.be/bbcswebdav/pid-14352243-dt-content-rid-29260566_3/orgs/C130069-B-1415/MVC.html -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>MVC Framework</title>
+    </head>
+    <body>
+    <div id="header">
+        Distributed Applications<br>
+        KU Leuven - Campus Groep T<br>
+        2015-2016<br>
+    </div>
+    
+    <div id="groupmembers">
+        <ul>
+            <li>Matthias Mombaerts</li>
+            <li>Max Helskens</li>
+            <li>Vincent Ceulemans</li>
+        </ul>
+    </div>
+    
+    <h1>Play Framework</h1>
+    <h2>Short description</h2>
+    <p></p>
+    
+    <h2>Technical features</h2>
+    <h3>MVC solution</h3>
+    <ul>
+        <li>
+    </ul>
+    
+    <p>
+        The model layer is not strictly defined by Play. It can be an ordinary Java class, a JPA entity...
+    </p>
+    
+    <p>
+        For the controller layer Play provides a Controller superclass which much be inherited.
+        A controller consists of different Actions ()
+    </p>
+    
+    <p>
+    
+    </p>
+    
+    <h3>Navigation</h3>
+    <p>...</p>
+    
+    <h3>Form handling</h3>
+    <p>
+        A FormFactory creates a Form object with a binding to a model class.
+        
+        Html form parameters are automatically set 
+        
+                
+    [Annotation tags.]
+    
+    
+    </p>
+    <h3>Validation</h3>
+    <p>
+        Entity classes can be annotated with JSR-303 (Bean Validation) annotation or Play's own Constraints annotations.
+        These are automatically used for validating and rendering Forms.
+    </p>
+    
+    <h3>Type conversion</h3>
+    <p>...</p>
+    
+    <h3>Server-side handling of user interface events</h3>
+    <p>...</p>
+    
+    <h3>Rendering</h3>
+    <p>
+        Play uses the Twirl template engine. It uses Scala as expression language.
+        
+        Usage is similar to JSTL. For simple templates you can convert from one to the other by replacing the '$'-signs with an '@' sign.
+    </p>
+        
+    <pre>
+    <code>
+        JSTL: ${item.id}
+        TWIRL: @item.getId()
+    </code>
+    </pre> 
+    
+    <p>    
+        Other constructs like for loops are slightly different since they use the Scala syntax.
+    </p>
+    
+        <pre>
+        <code>
+        @for(item <- list){
+            &lt;li&gt;@item.getName()&lt;/li&gt;
+        }
+        </code>
+        </pre>
+    
+    <p>    
+        Twirl is not so strict with delimiters. The @ sign indicates the start of an expression but there is no need to specify an end delimiter.
+        The engine can determine this automagicaly.
+        
+    <!--This results in less overhead in delimiter tags, but may harm readability since.-->
+    </p>
+    
+    <h3>I18N and L10N</h3>
+    <p>...</p>
+    
+    <h3>JavaScript integration</h3>
+    <p>
+        A JavaScript router can be generated. This is used to generate URLs in JavaScript code (for instance: A JQuery Ajax Request).
+        
+    </p>
+    
+    <h3> ...</h3>
+    
+    
+    
+    <h2>Documentation</h2>
+    <h3>Kind of documentation, quality, up-todate</h3>
+    <p>
+        Official documentation consists of a series of written pages explaining each concept of the framework.
+        The documentation is split into a part for Java developers and Scala developers.
+        They both deal with the same subjects but differ in the language (Java or Scala) of the examples.
+        
+        The documentation and API are sometimes lacking in verbosity leaving the developer to find out certain details. (For instance: a )
+        
+        Some features (certain form related template tags) are only mentioned in the API and not in the documentation.
+    </p>
+    
+    <p>
+        While the written documentation is up to date, some other parts are not. 
+        Most notably: the introduction video on the main site uses an outdated version of the framework.
+        Many other examples from other sources also use older versions.
+    </p>
+    <h3>Community activity</h3>
+    <p>...</p>
+    
+    <h2>Future evolution</h2>
+    <p>...</p>
+    <h2>Your perception</h2>
+        <p>...</p>
+        <h3>Ease of use</h3>
+        <p>...</p>
+        <h3>Ease of installation</h3>
+        <p>
+            Play uses a custom IDE and server running in a web browser. Installation exists of downloading a zip file and running a bash script to run this service.
+            
+            The setup does however take some time (apparently due to many dependencies being downloaded) but requires very little input from the user.
+            Since a server is included the installation is painless.
+            
+            Using your own editor like Netbeans requires some additional configuration steps.
+            
+            Deploying the final application on a production server may be somewhat difficult since no war files can be generated.
+            (Play uses its own format)
+        </p>
+        
+        
+        <h3>Learning curve</h3>
+        <p>
+            The initial learning curve is gently. With the help of the many quick start projects available from the editor you can get fast results.
+        </p>
+            
+        <p>
+            
+        </p>
+        
+        <p>
+            The provided editor lists many quick start projects to start from.
+            This is 
+            
+            
+        </p>
+        
+    <h2>Practical information</h2>
+    
+        <h3>Website</h3>
+        <p>
+            <a href="https://www.playframework.com/">
+                https://www.playframework.com/
+            </a>
+        </p>
+        
+        <h3>Download</h3>
+        <p>
+            <a href="https://www.playframework.com/download">
+                https://www.playframework.com/download
+            </a>
+        </p>
+</body>
+</html>
