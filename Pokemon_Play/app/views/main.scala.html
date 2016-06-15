@@ -19,14 +19,14 @@
                         <img src="@routes.Assets.at("img/Pokeball.png")" alt="pokeball icon" id="pokeball">
                         
                         <span class="horizontalMargin">
-                            <a href="/" class="bubble">
+                            <a href="@routes.Application.index()" class="bubble">
                                 @Messages("viewall")
                             </a>
                         </span>
                     </div>
 
                     <div class="headerWidget" style="width: 200px; margin-top: 30px;">
-                        <a href="/">
+                        <a href="@routes.Application.index()">
                             <img src="@routes.Assets.at("img/Pokemon-Logo.png")" id="logo" alt="Pokemon logo"/>
                         </a> 
                     </div>
@@ -36,7 +36,7 @@
                             English
                         </a>
                         
-                         <a href="@routes.Application.setLangToDutch()">
+                        <a href="@routes.Application.setLangToDutch()">
                             Nederlands
                         </a>
                     </div>

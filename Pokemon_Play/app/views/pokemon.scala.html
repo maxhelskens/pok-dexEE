@@ -2,19 +2,19 @@
 
 @main(selectedPokemon.getName()) {
     <div>
-        <a href="/pokemon/@selectedPokemon.getId()/edit">
+        <a href="@routes.Application.pokemonEdit(selectedPokemon.getId())">
             Edit
         </a>
     </div>
     <div class="pokemonHeader">
         <div id="pokemonLeftHeader">
             @if(selectedPokemon.getId() > 1){
-                <a href="/pokemon/@(selectedPokemon.getId() - 1)" class="pokemonlink bubble"> No. @(selectedPokemon.getId() - 1)</a>
+                <a href="@routes.Application.pokemon(selectedPokemon.getId()-1)" class="pokemonlink bubble"> No. @(selectedPokemon.getId() - 1)</a>
             }
         </div>
         <div id="pokemonRightHeader">
             @if(selectedPokemon.getId() < 151){
-                <a href="/pokemon/@(selectedPokemon.getId() + 1)" class="pokemonlink bubble"> No. @(selectedPokemon.getId() + 1)</a>
+                <a href="@routes.Application.pokemon(selectedPokemon.getId() + 1)" class="pokemonlink bubble"> No. @(selectedPokemon.getId() + 1)</a>
             }
         </div>
     </div>    
@@ -68,14 +68,6 @@
     <br/>
     <text><strong>Evolves at/by:</strong> @(selectedPokemon.getEvolvesBy())</text>
     <br/>
-   <!-- <c:if test="${!empty selectedPokemon.evolvesFrom}">
-        <a href="pokemon?${selectedPokemon.evolvesFrom.id}" class="pokemonlink bubble"> 
-            <text>Evolves from: </text>
-            <img src="${initParam.pokemonImagePath}${selectedPokemon.evolvesFrom.id}.png" class="thumbnail">
-        </a>
-    </c:if>-->
-    <br/>
-    <br/>
     <text><strong>Footprint: </strong></text>
     <img src="@(routes.Assets.at("img/footprints/" + selectedPokemon.getId() + ".png"))" class="thumbnail"/>
 </div>
@@ -90,16 +82,12 @@
     <br/>
     <br/>
     <br/>
-    <c:if test="${!empty selectedPokemon.evolvesTo}">
-        
-            <text>Evolves to: </text>
-            @for(evolvee <- selectedPokemon.getEvolvesTo()){
-            <a href="/pokemon/@evolvee.getId()" title="@evolvee.getName()" class="pokemonlink bubble"> 
-                <img src="@(routes.Assets.at("img/pokemon/" + evolvee.getId() + ".png"))" class="thumbnail">
-            </a>
-            }
-        
-    </c:if>
+    <text>Evolves to: </text>
+    @for(evolvee <- selectedPokemon.getEvolvesTo()){
+    <a href="/pokemon/@evolvee.getId()" title="@evolvee.getName()" class="pokemonlink bubble"> 
+        <img src="@(routes.Assets.at("img/pokemon/" + evolvee.getId() + ".png"))" class="thumbnail">
+    </a>
+    }
     <br/>
     <br/>
     <text id="cryLink"><strong>Cry: </strong></text>
@@ -120,7 +108,7 @@
 <div id="pokemonTyperow" style="margin-top: 5px">
     @for(t <- selectedPokemon.getTypeCollection()){
         <div class="typeBox">
-            <a href="type/@t.getId()">
+            <a href="">
                 <img src="@(routes.Assets.at("img/types/" + t.getId() + ".png"))"
                      alt="${t.getName()}" class="typeImage">
             </a>

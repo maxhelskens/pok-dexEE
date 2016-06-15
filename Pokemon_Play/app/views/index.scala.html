@@ -7,20 +7,20 @@
         @for(poke <- pokemon){
                 <tr>
                     <td>
-                        <a href="/pokemon/@poke.getId()">
+                        <a href="@routes.Application.pokemon(poke.getId())">
                             <img src="@(routes.Assets.at("img/pokemon/" + poke.getId()) + ".png")"
                                 alt="@poke.getName()"/>
                         </a>
                     </td>
 
                     <td>
-                        <a href="pokemon/@poke.getId()">
+                        <a href="@routes.Application.pokemon(poke.getId())">
                             @poke.getName()
                         </a>
                     </td>
 
                     <td>
-                        <a href="pokemon/@poke.getId()">
+                        <a href="@routes.Application.pokemon(poke.getId())">
                             <span class="smallText">@poke.getAbilityI()</span>
                             <br>
                             <span class="smallText">@poke.getAbilityII()</span>
