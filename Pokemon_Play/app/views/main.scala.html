@@ -20,18 +20,29 @@
                         
                         <span class="horizontalMargin">
                             <a href="/" class="bubble">
-                                view all Pokémon
+                                @Messages("viewall")
                             </a>
                         </span>
                     </div>
 
                     <div class="headerWidget" style="width: 200px; margin-top: 30px;">
                         <a href="/">
-                            <img src="@routes.Assets.at("img/Pokemon-Logo.png")" id="logo" alt="Pokemon logo">
+                            <img src="@routes.Assets.at("img/Pokemon-Logo.png")" id="logo" alt="Pokemon logo"/>
                         </a> 
+                    </div>
+                    
+                    <div class="headerWidget" style="width: 400px; margin-top: 30px; height: 200px;">
+                        <a href="@routes.Application.setLangToEnglish()">
+                            English
+                        </a>
+                        
+                         <a href="@routes.Application.setLangToDutch()">
+                            Nederlands
+                        </a>
                     </div>
                 </div>
 
+               
                 <div style="width: 100%; height: 32px; text-align: center ">
                     <h1 style="padding-top: 70px; font-size: 30px; color: #333;">
                         Got to catch'em all

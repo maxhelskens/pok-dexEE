@@ -91,4 +91,16 @@ public class Application extends Controller {
         Pokemon selectedPokemon = JPA.em().find(Pokemon.class, id);
         return ok(pokemon.render(selectedPokemon));
     }
+    
+    @Transactional
+    public Result setLangToDutch(){
+        ctx().changeLang("nl");
+        return redirect(routes.Application.index());
+    }
+    
+    @Transactional
+    public Result setLangToEnglish(){
+        ctx().changeLang("en");
+        return redirect(routes.Application.index());
+    }
 }
