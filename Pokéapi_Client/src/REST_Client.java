@@ -156,7 +156,7 @@ public class REST_Client extends javax.swing.JFrame {
 
         add(panel, BorderLayout.CENTER);
         
-        int blockID = 0;
+        int blockID = 1;
         
         for (int i = 0; i < 3; i++) {
 

@@ -28,3 +28,4 @@ genfiles.properties
 /SOAP_Client/dist/
 /REST_Client/build/
 /REST_Client/dist/
+/SOAP_Client/nbproject/private/
