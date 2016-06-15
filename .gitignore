@@ -22,3 +22,9 @@ genfiles.properties
 /Pokéapi_Client/build/
 /Pokéapi_Client/dist/
 /REST_Client/nbproject/private/
+/Pokemon_EE/build/
+/Pokemon_EE/nbproject/private/
+/Pokemon_EE/dist/
+/SOAP_Client/dist/
+/REST_Client/build/
+/REST_Client/dist/

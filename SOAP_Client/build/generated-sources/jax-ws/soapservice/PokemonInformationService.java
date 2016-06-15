@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "pokemonInformationService", targetNamespace = "http://soapService/", wsdlLocation = "http://localhost:8080/AffableBean/pokemonInformationService?wsdl")
+@WebServiceClient(name = "pokemonInformationService", targetNamespace = "http://soapService/", wsdlLocation = "http://localhost:8080/Pokemon_EE/pokemonInformationService?wsdl")
 public class PokemonInformationService
     extends Service
 {
@@ -30,7 +30,7 @@ public class PokemonInformationService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8080/AffableBean/pokemonInformationService?wsdl");
+            url = new URL("http://localhost:8080/Pokemon_EE/pokemonInformationService?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

@@ -26,7 +26,7 @@ public class PokemonClient {
 
     private WebTarget webTarget;
     private Client client;
-    private static final String BASE_URI = "http://localhost:8080/AffableBean/webresources";
+    private static final String BASE_URI = "http://localhost:8080/Pokemon_EE/webresources";
 
     public PokemonClient() {
         client = javax.ws.rs.client.ClientBuilder.newClient();
