@@ -127,17 +127,12 @@ public class Pokemon implements Serializable {
     @Column(name = "evolvesBy")
     private String evolvesBy;
     
-    /*@Column(name = "evolvesFrom")*/
     @JoinColumn(name = "evolvesFrom")
     @OneToOne
     private Pokemon evolvesFrom;
     
-    
     @ManyToMany
     private Collection<Pokemon> evolvesTo;
-    
-//    @Column(name = "evolvesTo")
-//    private Integer evolvesTo;
     
     @JoinTable(name = "pokemon_has_type", joinColumns = {
         @JoinColumn(name = "pokemon_id", referencedColumnName = "id")}, inverseJoinColumns = {
