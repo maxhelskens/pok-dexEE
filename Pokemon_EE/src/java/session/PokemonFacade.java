@@ -35,4 +35,12 @@ public class PokemonFacade extends AbstractFacade<Pokemon> {
         Pokemon randPokemon = this.find(Result);
         return randPokemon;
     }
+    
+    public boolean getCatched(Pokemon pokemon){
+        int randomInt = (int) Math.floor((Math.random() * 605) + 1);
+        if(randomInt >= (pokemon.getTotal() - 195)){
+            return true;
+        }
+        return false;
+    }
 }

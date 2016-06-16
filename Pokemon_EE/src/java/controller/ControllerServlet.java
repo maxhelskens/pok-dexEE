@@ -151,7 +151,8 @@ public class ControllerServlet extends HttpServlet {
             Pokemon randPokemon = pokemonFacade.getRandomPokemon();
             request.setAttribute("randPokemon", randPokemon);
             request.setAttribute("randPokemonTypes", randPokemon.getTypeCollection());
-
+            session.setAttribute("catched", pokemonFacade.getCatched(randPokemon));
+            
             userPath = "index";
         }
         else if(userPath.equals("/featured")){
@@ -201,12 +202,13 @@ public class ControllerServlet extends HttpServlet {
             // get user input from request
             String pokemonId = request.getParameter("pokemonId");
 
-            if (!pokemonId.isEmpty()) {
+            if((boolean) session.getAttribute("catched") == true && !pokemonId.isEmpty()) {
                 Pokemon pokemon = pokemonFacade.find(Integer.parseInt(pokemonId));
                 pokedexBean.add(pokemon);
             }
             
             session.setAttribute("caughtpokemon", pokedexBean.getItems());
+            session.setAttribute("catched", false);
             
             response.sendRedirect("viewCart");
         // if updateCart action is called

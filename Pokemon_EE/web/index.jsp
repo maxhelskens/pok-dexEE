@@ -163,7 +163,7 @@
             })
             .on("click",function () {
         //Generate random int to see if the pokemon ran away
-        var randomInt = Math.floor((Math.random() * 605) + 1);
+        //var randomInt = Math.floor((Math.random() * 605) + 1);
 
         d3.select("#wildPokemon")
                 .transition()
@@ -212,7 +212,9 @@
                 .duration(100)
                 .attr("transform", "translate(-86 , -172) rotate(0)")
                 .each("end", function(){
-                    if(randomInt >= ${randPokemon.total - 195}){
+                    if(${catched})
+                        //randomInt >= ${randPokemon.total - 195})
+                    {
                         form.submit();
                     }
                     else {
