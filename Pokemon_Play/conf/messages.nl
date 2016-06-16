@@ -24,6 +24,3 @@ specialAttack=Speciale Aanval
 specialDefense=Speciale Verdediging
 total=Totale Sterkte
 evolvesBy=Evolueert Door
-error.required=Dit veld is verplicht
-info.required=Dit veld is verplicht
-constraints.required=Dit veld is verplicht
