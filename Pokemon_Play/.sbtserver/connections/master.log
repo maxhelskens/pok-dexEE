@@ -1,19 +1,13 @@
-New log file opened at Wed Jun 15 19:07:49 CEST 2016 by 2687@VinnniesLaptop
-Taking next connection to: 35546
-New client attempting to connect on port: 41750-35546
-  Address = /127.0.1.1:35546
-This client on port 41750 has uuid e78e8e2b-de75-42f9-a2c2-dfda19349152 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-e78e8e2b-de75-42f9-a2c2-dfda19349152
-Taking next connection to: 35546
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 35546
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 35546
-New client attempting to connect on port: 42008-35546
-  Address = /127.0.1.1:35546
-Handshake exception on socket: 42008
+New log file opened at Thu Jun 16 10:53:08 CEST 2016 by 19582@ibensurface.vesalius.groept.be
+Taking next connection to: 59584
+New client attempting to connect on port: 59585-59584
+  Address = /10.167.162.235:59584
+This client on port 59585 has uuid 2f1256df-70a4-46eb-9549-f86a624c48fc configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-2f1256df-70a4-46eb-9549-f86a624c48fc
+Taking next connection to: 59584
+New client attempting to connect on port: 59614-59584
+  Address = /10.167.162.235:59584
+Handshake exception on socket: 59614
 sbt.impl.ipc.HandshakeException: Unable to perform handshake
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
 	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
@@ -23,18 +17,12 @@ Caused by: java.io.EOFException
 	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
 	... 2 more
-Taking next connection to: 35546
-New client attempting to connect on port: 42010-35546
-  Address = /127.0.1.1:35546
-This client on port 42010 has uuid b59bbb15-83f4-49a8-9ce2-c172b764d8a0 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-e78e8e2b-de75-42f9-a2c2-dfda19349152, play-fork-run-b59bbb15-83f4-49a8-9ce2-c172b764d8a0
-Taking next connection to: 35546
+Taking next connection to: 59584
+New client attempting to connect on port: 59615-59584
+  Address = /10.167.162.235:59584
+This client on port 59615 has uuid 18da53cb-397b-4721-849e-3fd2e5e7fa85 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-2f1256df-70a4-46eb-9549-f86a624c48fc, play-fork-run-18da53cb-397b-4721-849e-3fd2e5e7fa85
+Taking next connection to: 59584
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 35546
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 35546
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 35546
+Taking next connection to: 59584
