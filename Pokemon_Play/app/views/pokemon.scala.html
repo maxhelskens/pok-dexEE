@@ -3,7 +3,7 @@
 @main(selectedPokemon.getName()) {
     <div>
         <a href="@routes.Application.pokemonEdit(selectedPokemon.getId())">
-            Edit
+            @Messages("edit")
         </a>
     </div>
     <div class="pokemonHeader">
@@ -58,15 +58,15 @@
 
 <div id="pokemonRightColumn" style="font-size: 12px">
     <br/>
-    <text><strong>Height:</strong> @(selectedPokemon.getHeight()/10f) m</text>
+    <text><strong>@Messages("height"):</strong> @(selectedPokemon.getHeight()/10f) m</text>
     <br/>
-    <text><strong>Gender:</strong> @(selectedPokemon.getGender())</text>
-    <br/>
-    <br/>
-    <text><strong>Ability I:</strong> @(selectedPokemon.getAbilityI())</text>
+    <text><strong>@Messages("gender"):</strong> @(selectedPokemon.getGender())</text>
     <br/>
     <br/>
-    <text><strong>Evolves at/by:</strong> @(selectedPokemon.getEvolvesBy())</text>
+    <text><strong>@Messages("ability") I:</strong> @(selectedPokemon.getAbilityI())</text>
+    <br/>
+    <br/>
+    <text><strong>@Messages("evolvesby"):</strong> @(selectedPokemon.getEvolvesBy())</text>
     <br/>
     <text><strong>Footprint: </strong></text>
     <img src="@(routes.Assets.at("img/footprints/" + selectedPokemon.getId() + ".png"))" class="thumbnail"/>
@@ -74,15 +74,15 @@
 
 <div id="pokemonRightColumn" style="font-size: 12px">
     <br/>
-    <text><strong>Weight:</strong> @(selectedPokemon.getWeight()/10f)) kg</text>
+    <text><strong>@Messages("weight"):</strong> @(selectedPokemon.getWeight()/10f)) kg</text>
     <br/>
     <br/>
     <br/>
-    <text><strong>Ability II:</strong> @(selectedPokemon.getAbilityII())</text>
+    <text><strong>@Messages("ability") II:</strong> @(selectedPokemon.getAbilityII())</text>
     <br/>
     <br/>
     <br/>
-    <text>Evolves to: </text>
+    <text>@Messages("evolvesto"): </text>
     @for(evolvee <- selectedPokemon.getEvolvesTo()){
     <a href="/pokemon/@evolvee.getId()" title="@evolvee.getName()" class="pokemonlink bubble"> 
         <img src="@(routes.Assets.at("img/pokemon/" + evolvee.getId() + ".png"))" class="thumbnail">
@@ -90,12 +90,12 @@
     }
     <br/>
     <br/>
-    <text id="cryLink"><strong>Cry: </strong></text>
+    <text id="cryLink"><strong>@Messages("cry"): </strong></text>
     <audio id="cry" preload="auto">
         <source src="@(routes.Assets.at("sound/cries/" + selectedPokemon.getId() + ".mp3"))" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <input type="button" value="PLAY"  onclick="play()">
+    <input type="button" value="@Messages("play")"  onclick="play()">
     <script>
         function play(){
             var audio = document.getElementById("cry");
@@ -120,9 +120,9 @@
     <div class="pokemonFooterLeft">
         <text><strong>Hp: </strong></text>
         <br/>
-        <text><strong>Attack: </strong></text>
+        <text><strong>@Messages("attack"): </strong></text>
         <br/>
-        <text><strong>Defense: </strong></text>
+        <text><strong>@Messages("defense"): </strong></text>
     </div>
     <div class="pokemonFooterMiddle">
         <text>@(selectedPokemon.getHp())</text>
@@ -141,11 +141,11 @@
     </div>
     
     <div class="pokemonFooterLeft">
-        <text><strong>Speed: </strong></text>
+        <text><strong>@Messages("speed"): </strong></text>
         <br/>
-        <text><strong>S. attack: </strong></text>
+        <text><strong>@Messages("sattack"): </strong></text>
         <br/>
-        <text><strong>S. defense: </strong></text>
+        <text><strong>@Messages("sdefense"): </strong></text>
     </div>
     <div class="pokemonFooterMiddle">
         <text>@selectedPokemon.getSpeed()</text>
@@ -165,7 +165,7 @@
     
     <div class="pokemonBigFooterLeft">
         <br/>
-        <text><strong>Total Strength: </strong></text>
+        <text><strong>@Messages("strength"): </strong></text>
         <br/>
     </div>
     <div class="pokemonBigFooterMiddle">
@@ -183,7 +183,7 @@
 <div id="pokemonFooter" style="font-size: 12px">
     <div class="pokemonBigFooterLeft">
         <br/>
-        <text><strong>Catching chance: </strong></text>
+        <text><strong>@Messages("chance"): </strong></text>
         <br/>
     </div>
     <div class="pokemonBigFooterMiddle">
