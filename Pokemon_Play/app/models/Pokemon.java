@@ -52,7 +52,6 @@ public class Pokemon implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
-    @Constraints.Required
     @Id
     @Basic(optional = false)
     @NotNull
@@ -66,12 +65,15 @@ public class Pokemon implements Serializable {
     @Column(name = "name")
     private String name;
     
-    @Constraints.Max(456321)
+    /*Max 7m */
+    @Constraints.Max(90)
+    @Constraints.Required
     @Basic(optional = false)
     @NotNull
     @Column(name = "height")
     private int height;
     
+    @Constraints.Max(5000)
     @Constraints.Required
     @Basic(optional = false)
     @NotNull

@@ -1,6 +1,14 @@
 @(pokeForm: Form[Pokemon], types : Map[String, String])
 
 @main("Wie is deze Pokemon?") {
+
+    <style>
+        label[for="id"]{
+            display: none;
+            
+        }
+        
+    </style>
     <div id="typePage" style="height: 520px">
     @if(pokeForm.hasGlobalErrors) {
         <p class="error">
@@ -12,7 +20,11 @@
 
     @helper.form(action = routes.Application.addPokemon()) {
         @helper.inputText(pokeForm("name"))
-        @helper.inputText(pokeForm("id"))
+        
+        @helper.input(pokeForm("id")) { (id, name, value, args) =>
+            <input type="hidden" name="@name" id="@id" value="@value" @toHtmlArgs(args)>
+        }
+
         @helper.inputText(pokeForm("height"))
         
         @helper.inputText(pokeForm("weight"))

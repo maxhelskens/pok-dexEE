@@ -68,10 +68,8 @@ public class Application extends Controller {
             Pokemon pokemon = pokeForm.get();
             JPA.em().merge(pokemon);
             JPA.em().flush();
+            return redirect(routes.Application.pokemon(pokemon.getId()));
         }
-        
-        
-        return redirect(routes.Application.index());
     }
 
     @Transactional(readOnly = true)
